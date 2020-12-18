@@ -1,0 +1,11 @@
+@import "scss";
+
+body,
+html {
+  height: auto;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  outline: none;
+}
