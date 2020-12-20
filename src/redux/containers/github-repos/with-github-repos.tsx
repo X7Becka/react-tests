@@ -1,44 +1,46 @@
 import React from 'react';
 import {connect} from 'react-redux';
 // import {reqStatusAction} from '../../actions/req-status';
-import {fetchOrganizationRepositoriesAction} from "../../actions/github-repos";
-import {WITH_GITHUB_REPOS_TPROPS} from "../../types/github-repos";
+import * as actions from "../../actions/github-repos";
+import {githubReposTProps, withGithubReposTProps} from "../../types/github-repos";
+import {RootState} from "MyTypes"
+import {AppState} from "../../root-reducer";
 
-export const withGithubRepos = (ChildComponent: React.ComponentType) => {
-    class GithubReposContainer extends React.PureComponent <WITH_GITHUB_REPOS_TPROPS> {
+export const withGithubRepos = <P extends object> (ChildComponent: React.ComponentType<P>) => {
+    class GithubReposContainer extends React.PureComponent <withGithubReposTProps> {
 
         componentDidMount = () => {
             this._init();
         }
 
         render = () => {
-            // const {githubRepos, childComponentProps} = this.props;
+            const {githubRepos} = this.props;
             const props = {
-                // ...childComponentProps
+                githubRepos
             };
-            return <ChildComponent {...props}/>;
+            return <ChildComponent {...props as P}/>;
         }
 
         _init = () => {
             console.log(this.props, 'this.props')
-            this.props.fetchOrganizationRepositories("adobe")
+            this.props.fetchOrganizationRepositories("adobe123")
         }
     }
 
     const mapDispatchToProps = (dispatch: any) => {
-        console.log(dispatch, 'dispatch')
         return {
             // setReqStatus: (isFetching: any) => dispatch(reqStatusAction(isFetching))
-            fetchOrganizationRepositories: (organization: string) => dispatch(fetchOrganizationRepositoriesAction(organization))
+            fetchOrganizationRepositories: (organization: string) => dispatch(actions.fetchOrganizationRepositoriesAction(organization))
         };
     };
 
-    const mapStateToProps = (store: any) => {
+    const mapStateToProps = (store: AppState) => {
         return {
             reqStatus: store.reqStatus,
             githubRepos: store.githubRepos
         };
     };
 
-    return connect(mapStateToProps, mapDispatchToProps)(GithubReposContainer);
+    // @ts-ignore
+    return connect<P, ReturnType<typeof mapStateToProps>>(mapStateToProps, mapDispatchToProps)(GithubReposContainer);
 };

@@ -3,8 +3,8 @@ export type REDUCER_ACTION = {
     type: string;
 }
 
-export type ACTIONS_REQ_STATUS = string
-export type ACTIONS_REQ_ERROR = string
+export type ACTIONS_REQ_STATUS = boolean
+export type ACTIONS_REQ_ERROR = boolean
 
 export type TProps = {
     reqStatus: {

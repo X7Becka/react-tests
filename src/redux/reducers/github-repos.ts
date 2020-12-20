@@ -1,13 +1,24 @@
-import * as githubReposActions from '../actions/github-repos';
-import {REDUCER_ACTION} from "../types/github-repos";
+import {RepoItemType} from "../types/github-repos";
+import {combineReducers} from "redux";
+import * as actions from './../types/github-repos';
+import {ActionType} from "typesafe-actions";
+import {GithubRepos} from "../../pages/github-repos/github-repos";
 
-const initialState = {
-    repositoryList: null
-};
+// type GithubReposAction = ActionType<typeof actions>;
 
-export function githubReposReducer(state = initialState, action: REDUCER_ACTION) {
+
+
+export interface GithubReposState {
+    repositoryList: Array<RepoItemType>
+}
+
+const initialState: GithubReposState = {
+    repositoryList: []
+}
+
+export default function githubReposReducer(state: GithubReposState = initialState, action: actions.ReceiveReposAction): GithubReposState {
     switch (action.type) {
-        case githubReposActions.RECEIVE_ORGANIZATION_REPOSITORIES: {
+        case actions.RECEIVE_ORGANIZATION_REPOSITORIES: {
             return {...state, repositoryList: action.payload};
         }
         default: return state;

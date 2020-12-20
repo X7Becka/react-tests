@@ -1,20 +1,24 @@
-import { call, put, takeLatest } from 'redux-saga/effects';
+import { call, put, takeEvery } from 'redux-saga/effects';
 import { fetchOrganizationRepositoriesApi } from '../utils/api';
-import {fetchOrganizationRepositoriesAction, receiveOrganizationRepositoriesAction} from '../actions/github-repos';
-import * as githubReposActions from '../actions/github-repos';
+import {receiveOrganizationRepositoriesAction} from '../actions/github-repos';
+import * as types from "../types/github-repos";
+import {reqErrorAction, reqStatusAction} from "../actions/req-status";
 
 
 export function* watchGetOrganizationRepositories() {
-    yield takeLatest(githubReposActions.FETCH_ORGANIZATION_REPOSITORIES, callGetOrganizationRepositories);
+    yield takeEvery(types.FETCH_ORGANIZATION_REPOSITORIES, callGetOrganizationRepositories);
 }
-//@ts-ignore
-function* callGetOrganizationRepositories(action) {
+
+function* callGetOrganizationRepositories(action: types.ReceiveReposAction & types.FetchReposAction) {
     try {
-        const repos = action.payload;
-        const response = yield call(fetchOrganizationRepositoriesApi, repos);
+        console.log(action, 'action')
+
+        // @ts-ignore
+        const response = yield call(fetchOrganizationRepositoriesApi, action.payload);
+        yield put(reqStatusAction(true));
         yield put(receiveOrganizationRepositoriesAction(response.data));
+        yield put(reqStatusAction(false));
     } catch(error) {
-        // yield put(receiveMessageAction(error));
-        console.log('err')
+        yield put(reqErrorAction(true));
     }
 }
