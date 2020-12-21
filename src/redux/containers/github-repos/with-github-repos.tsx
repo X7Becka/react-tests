@@ -1,9 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
-// import {reqStatusAction} from '../../actions/req-status';
 import * as actions from "../../actions/github-repos";
-import {githubReposTProps, withGithubReposTProps} from "../../types/github-repos";
-import {RootState} from "MyTypes"
+import {withGithubReposTProps} from "../../types/github-repos";
 import {AppState} from "../../root-reducer";
 
 export const withGithubRepos = <P extends object> (ChildComponent: React.ComponentType<P>) => {
@@ -23,7 +21,7 @@ export const withGithubRepos = <P extends object> (ChildComponent: React.Compone
 
         _init = () => {
             console.log(this.props, 'this.props')
-            this.props.fetchOrganizationRepositories("adobe123")
+            this.props.fetchOrganizationRepositories("adobe")
         }
     }
 

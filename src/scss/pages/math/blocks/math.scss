@@ -1,0 +1,34 @@
+.math {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &__form {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 24px;
+  }
+
+  &__matrix-wrapper {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #b7b7b7;
+  }
+
+  &__matrix-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__matrix-item {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #b7b7b7;
+  }
+}
