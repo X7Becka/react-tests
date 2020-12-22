@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e91b5e8-2f5b-436f-b811-6dac0a0b806f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/math/math-brackets.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/math/math-matrix.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/pages/math/blocks/math-expression.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/pages/math/blocks/math-matrix.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/menu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/components/common/blocks/menu.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/components/common/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/components/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/math/math.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/math/math.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/pages/math/blocks/math.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/math/blocks/math.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/pages/math/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/math/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/main-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/main-layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/index.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +103,7 @@
       <workItem from="1608403795892" duration="6766000" />
       <workItem from="1608478968700" duration="21514000" />
       <workItem from="1608530328179" duration="21648000" />
-      <workItem from="1608614755155" duration="8574000" />
+      <workItem from="1608614755155" duration="10544000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1608320112776</created>
@@ -125,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608581345357</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="math-tasks">
+      <created>1608623355037</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608623355037</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,7 +146,8 @@
     <MESSAGE value="start" />
     <MESSAGE value="types..." />
     <MESSAGE value="math-task" />
-    <option name="LAST_COMMIT_MESSAGE" value="math-task" />
+    <MESSAGE value="math-tasks" />
+    <option name="LAST_COMMIT_MESSAGE" value="math-tasks" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

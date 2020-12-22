@@ -1,0 +1,14 @@
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__links-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+}
