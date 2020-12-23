@@ -9,12 +9,9 @@ export function* watchGetOrganizationRepositories() {
     yield takeEvery(types.FETCH_ORGANIZATION_REPOSITORIES, callGetOrganizationRepositories);
 }
 
-function* callGetOrganizationRepositories(action: types.ReceiveReposAction & types.FetchReposAction) {
+function* callGetOrganizationRepositories({payload}: types.FetchReposAction) {
     try {
-        console.log(action, 'action')
-
-        // @ts-ignore
-        const response = yield call(fetchOrganizationRepositoriesApi, action.payload);
+        const response = yield call(fetchOrganizationRepositoriesApi, payload);
         yield put(reqStatusAction(true));
         yield put(receiveOrganizationRepositoriesAction(response.data));
         yield put(reqStatusAction(false));

@@ -1,17 +1,22 @@
-import * as reqStatusAction from '../actions/req-status';
-import {REDUCER_ACTION} from "../types/req-status";
+import * as actions from '../types/req-status';
+import {Reducer} from "redux";
 
-const initialState = {
+export type ReqStatusState = {
+    readonly isFetching: boolean,
+    readonly error: boolean
+}
+
+const initialState: ReqStatusState = {
     isFetching: false,
     error: false
 };
 
-export function reqStatusReducer(state = initialState, action: REDUCER_ACTION) {
+export const reqStatusReducer: Reducer<ReqStatusState, actions.ReqStatusActions> = (state = initialState, action) => {
     switch (action.type) {
-        case reqStatusAction.REQ_STATUS:
+        case actions.REQ_STATUS:
             return {...state, isFetching: action.payload};
 
-        case reqStatusAction.REQ_ERROR:
+        case actions.REQ_ERROR:
             return {...state, error: action.payload};
 
         default:

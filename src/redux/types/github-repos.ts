@@ -1,16 +1,16 @@
 export const FETCH_ORGANIZATION_REPOSITORIES = "githubRepos/FETCH_ORGANIZATION_REPOSITORIES"
-export interface FetchReposAction {
+export type FetchReposAction = {
     type: typeof FETCH_ORGANIZATION_REPOSITORIES
     payload: string
 }
 
 export const RECEIVE_ORGANIZATION_REPOSITORIES = "githubRepos/RECEIVE_ORGANIZATION_REPOSITORIES"
-export interface ReceiveReposAction {
+export type ReceiveReposAction = {
     type: typeof RECEIVE_ORGANIZATION_REPOSITORIES
     payload: Array<RepoItemType>
 }
 
-export type GithubReposAction =
+export type GithubReposActions =
     | FetchReposAction
     | ReceiveReposAction
 

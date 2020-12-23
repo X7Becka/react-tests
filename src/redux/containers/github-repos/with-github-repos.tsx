@@ -1,8 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import * as actions from "../../actions/github-repos";
-import {withGithubReposTProps} from "../../types/github-repos";
-import {AppState} from "../../root-reducer";
+import * as types from "../../types/github-repos";
+import {GithubReposActions, withGithubReposTProps} from "../../types/github-repos";
+import {RootState} from "../../root-reducer";
+import {Dispatch} from "redux";
 
 export const withGithubRepos = <P extends object> (ChildComponent: React.ComponentType<P>) => {
     class GithubReposContainer extends React.PureComponent <withGithubReposTProps> {
@@ -25,20 +27,20 @@ export const withGithubRepos = <P extends object> (ChildComponent: React.Compone
         }
     }
 
-    const mapDispatchToProps = (dispatch: any) => {
+    const mapDispatchToProps = (dispatch: Dispatch<GithubReposActions>) => {
         return {
-            // setReqStatus: (isFetching: any) => dispatch(reqStatusAction(isFetching))
-            fetchOrganizationRepositories: (organization: string) => dispatch(actions.fetchOrganizationRepositoriesAction(organization))
+            fetchOrganizationRepositories: (organization: types.FetchReposAction['payload']) => dispatch(actions.fetchOrganizationRepositoriesAction(organization))
         };
     };
 
-    const mapStateToProps = (store: AppState) => {
+    const mapStateToProps = (store: RootState) => {
         return {
             reqStatus: store.reqStatus,
             githubRepos: store.githubRepos
         };
     };
 
-    // @ts-ignore
+
+
     return connect<P, ReturnType<typeof mapStateToProps>>(mapStateToProps, mapDispatchToProps)(GithubReposContainer);
 };

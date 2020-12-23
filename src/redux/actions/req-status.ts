@@ -1,18 +1,15 @@
-import {ACTIONS_REQ_ERROR, ACTIONS_REQ_STATUS} from "../types/req-status";
+import * as actions from "../types/req-status"
 
-export const REQ_STATUS = 'REQ_STATUS';
-export const REQ_ERROR = 'REQ_ERROR';
-
-export function reqStatusAction(isFetching: ACTIONS_REQ_STATUS) {
+export function reqStatusAction(isFetching: actions.ReqStatusAction['payload']): actions.ReqStatusAction {
     return {
-        type: REQ_STATUS,
+        type: actions.REQ_STATUS,
         payload: isFetching
     };
 }
 
-export function reqErrorAction(error: ACTIONS_REQ_ERROR) {
+export function reqErrorAction(error: actions.ReqErrorAction['payload']): actions.ReqErrorAction {
     return {
-        type: REQ_ERROR,
+        type: actions.REQ_ERROR,
         payload: error
     };
 }

@@ -7,7 +7,9 @@ import "./index.scss"
 import {MainLayout} from './layouts/main-layout';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from "react-redux"
-import {store} from "./redux/store";
+import configureStore from "./redux/store";
+
+const store = configureStore()
 
 ReactDOM.render(
     <Provider store={store}><React.StrictMode><MainLayout/></React.StrictMode></Provider>,

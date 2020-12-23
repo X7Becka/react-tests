@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {TProps} from "../../types/req-status";
+import {RootState} from "../../root-reducer";
 
 class RequestLoader extends React.PureComponent <TProps> {
     mounted = false;
@@ -26,13 +27,12 @@ class RequestLoader extends React.PureComponent <TProps> {
     }
 }
 
-const mapStateToProps = (store: Record<any, object>) => {
+const mapStateToProps = (store: RootState) => {
     return {
         reqStatus: store.reqStatus
     };
 };
 
 // @ts-ignore
-const RequestLoaderContainer = connect(mapStateToProps)(RequestLoader);
+export default connect(mapStateToProps)(RequestLoader);
 
-export default RequestLoaderContainer;

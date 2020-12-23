@@ -2,16 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e91b5e8-2f5b-436f-b811-6dac0a0b806f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/common/menu.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/components/common/blocks/menu.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/components/common/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/components/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/main-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/main-layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/github-repos/github-repos.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/github-repos/github-repos.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions/github-repos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/github-repos.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions/req-status.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/req-status.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/containers/common/request-loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/containers/common/request-loader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/containers/github-repos/with-github-repos.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/containers/github-repos/with-github-repos.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/github-repos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/github-repos.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/req-status.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/req-status.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/root-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/root-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/sagas/github-repos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/sagas/github-repos.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/types/github-repos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/types/github-repos.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/types/req-status.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/types/req-status.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +68,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Git\react-tests\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -103,7 +110,11 @@
       <workItem from="1608403795892" duration="6766000" />
       <workItem from="1608478968700" duration="21514000" />
       <workItem from="1608530328179" duration="21648000" />
-      <workItem from="1608614755155" duration="10544000" />
+      <workItem from="1608614755155" duration="11264000" />
+      <workItem from="1608668950997" duration="1226000" />
+      <workItem from="1608671018359" duration="4305000" />
+      <workItem from="1608711493566" duration="95000" />
+      <workItem from="1608711615647" duration="30174000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1608320112776</created>
@@ -133,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608623355037</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="menu">
+      <created>1608626097509</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608626097509</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,7 +165,8 @@
     <MESSAGE value="types..." />
     <MESSAGE value="math-task" />
     <MESSAGE value="math-tasks" />
-    <option name="LAST_COMMIT_MESSAGE" value="math-tasks" />
+    <MESSAGE value="menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="menu" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
