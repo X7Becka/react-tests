@@ -2,8 +2,6 @@ import {RepoItemType} from "../types/github-repos";
 import * as actions from './../types/github-repos';
 import {Reducer} from "redux";
 
-
-
 export type GithubReposState = {
     readonly repositoryList: Array<RepoItemType>
 }

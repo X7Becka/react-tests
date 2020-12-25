@@ -19,7 +19,6 @@ export const reqStatusReducer: Reducer<ReqStatusState, actions.ReqStatusActions>
         case actions.REQ_ERROR:
             return {...state, error: action.payload};
 
-        default:
-            return state;
+        default: return state;
     }
 }

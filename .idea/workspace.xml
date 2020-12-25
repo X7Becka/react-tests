@@ -6,19 +6,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/github-repos/github-repos.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/github-repos/github-repos.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions/github-repos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/github-repos.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions/req-status.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/req-status.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/containers/common/request-loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/containers/common/request-loader.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/containers/github-repos/with-github-repos.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/containers/github-repos/with-github-repos.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducers/github-repos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/github-repos.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducers/req-status.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/req-status.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/root-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/root-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/sagas/github-repos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/sagas/github-repos.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/types/github-repos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/types/github-repos.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/types/req-status.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/types/req-status.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +106,9 @@
       <workItem from="1608668950997" duration="1226000" />
       <workItem from="1608671018359" duration="4305000" />
       <workItem from="1608711493566" duration="95000" />
-      <workItem from="1608711615647" duration="30174000" />
+      <workItem from="1608711615647" duration="30252000" />
+      <workItem from="1608791265975" duration="2938000" />
+      <workItem from="1608841090435" duration="8616000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1608320112776</created>
@@ -151,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608626097509</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="types......................">
+      <created>1608757487315</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1608757487315</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,7 +167,8 @@
     <MESSAGE value="math-task" />
     <MESSAGE value="math-tasks" />
     <MESSAGE value="menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="menu" />
+    <MESSAGE value="types......................" />
+    <option name="LAST_COMMIT_MESSAGE" value="types......................" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

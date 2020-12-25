@@ -1,15 +1,21 @@
 import {CombinedState, combineReducers} from 'redux';
 
-import {githubReposReducer} from './reducers/github-repos';
-import {reqStatusReducer} from "./reducers/req-status";
+import {githubReposReducer, GithubReposState} from './reducers/github-repos';
+import {reqStatusReducer, ReqStatusState} from "./reducers/req-status";
 
-export const rootReducer = combineReducers({
+export const rootReducer = combineReducers<RootState>({
     githubRepos: githubReposReducer,
     reqStatus: reqStatusReducer,
 })
 
-type State = ReturnType<typeof rootReducer>;
 
-type kek<T> = T extends CombinedState<infer R> ? R : never
+// export type RootState = ReturnType<typeof rootReducer>
+export type RootState = {
+    githubRepos: GithubReposState
+    reqStatus: ReqStatusState
+}
 
-export type RootState = kek<State>
+
+// type kek<T> = T extends CombinedState<infer R> ? R : never
+//
+// export type State = kek<RootState>

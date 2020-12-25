@@ -33,6 +33,5 @@ const mapStateToProps = (store: RootState) => {
     };
 };
 
-// @ts-ignore
-export default connect(mapStateToProps)(RequestLoader);
+export default connect<object, object, object, RootState>(mapStateToProps)(RequestLoader);
 
