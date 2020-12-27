@@ -1,0 +1,40 @@
+{
+  "plugins": [
+    "unicorn",
+    "@typescript-eslint"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:unicorn/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "semi": ["warn","never"],
+    "quotes": ["warn", "single"],
+    "semi-spacing": "warn",
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "unicorn/prevent-abbreviations": "off",
+    "unicorn/consistent-function-scoping": "off",
+    "object-curly-spacing": "warn",
+    "object-shorthand": "warn"
+  }
+}

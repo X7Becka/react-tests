@@ -1,55 +1,94 @@
-import React from 'react';
-import {connect, MapStateToPropsParam} from 'react-redux';
-import * as actions from "../../actions/github-repos";
-import * as types from "../../types/github-repos";
-import {GithubReposActions, withGithubReposTProps} from "../../types/github-repos";
-import {RootState} from "../../root-reducer";
-import {Dispatch} from "redux";
-import {RouteComponentProps} from "react-router";
+import React from 'react'
+import {connect} from 'react-redux'
+import * as actions from '../../actions/github-repos'
+import * as types from '../../types/github-repos'
+import {GithubReposActions, RepoItemType} from '../../types/github-repos'
+import {RootState} from '../../root-reducer'
+import {Dispatch} from 'redux'
+import {RouteComponentProps} from 'react-router'
+import {GithubRepos} from '../../../pages/github-repos/github-repos'
+
+export type GithubReposEnhancedTProps = {
+    githubRepos: {repositoryList: Array<RepoItemType>}
+}
 
 
+// export const withGithubRepos = <P extends object>(EnhancedComponent: React.ComponentType<P>) => {
+//
+//     type TProps = ReturnType<typeof mapDispatchToProps> & ReturnType<typeof mapStateToProps> & RouteComponentProps
+//
+//     class GithubReposContainer extends React.PureComponent <TProps> {
+//
+//         componentDidMount = () => {
+//             this._init()
+//         }
+//
+//         render = () => {
+//             const {githubRepos} = this.props
+//             const props = {
+//                 githubRepos
+//             }
+//
+//             return <EnhancedComponent {...props as P}/>
+//         }
+//
+//         _init = () => {
+//             this.props.fetchOrganizationRepositories('adobe')
+//         }
+//     }
+//
+//     const mapDispatchToProps = (dispatch: Dispatch<GithubReposActions>) => {
+//         return {
+//             fetchOrganizationRepositories: (organization: types.FetchReposAction['payload']) => dispatch(actions.fetchOrganizationRepositoriesAction(organization))
+//         }
+//     }
+//
+//   const mapStateToProps = (store: RootState) => {
+//     return {
+//       reqStatus: store.reqStatus,
+//       githubRepos: store.githubRepos
+//         }
+//     }
+//
+//     return connect(mapStateToProps, mapDispatchToProps)(GithubReposContainer)
+//
+// }
+
+type TProps = ReturnType<typeof mapDispatchToProps> & ReturnType<typeof mapStateToProps> & RouteComponentProps
 
 
-export const withGithubRepos = <P extends object> (ChildComponent: React.ComponentType<P>) => {
+class GithubReposContainer extends React.PureComponent <TProps> {
 
-    type TProps = ReturnType<typeof mapDispatchToProps> & ReturnType<typeof mapStateToProps> & RouteComponentProps
-
-    class GithubReposContainer extends React.PureComponent <TProps> {
-        state = {
-
-        }
-
-        componentDidMount = () => {
-            this._init();
-        }
-
-        render = () => {
-            const {githubRepos} = this.props;
-            const props = {
-                githubRepos
-            };
-            return <ChildComponent {...props as P}/>;
-        }
-
-        _init = () => {
-            console.log(this.props, 'this.props')
-        }
+    componentDidMount = () => {
+        this._init()
     }
 
-    const mapDispatchToProps = (dispatch: Dispatch<GithubReposActions>) => {
-        return {
-            fetchOrganizationRepositories: (organization: types.FetchReposAction['payload']) => dispatch(actions.fetchOrganizationRepositoriesAction(organization))
-        };
-    };
+    render = () => {
+        const {githubRepos} = this.props
+        const props = {
+            githubRepos
+        }
 
-    const mapStateToProps = (store: RootState) => {
-        return {
-            reqStatus: store.reqStatus,
-            githubRepos: store.githubRepos
-        };
-    };
+        return <GithubRepos {...props}/>
+    }
 
+    _init = () => {
+        this.props.fetchOrganizationRepositories('adobe')
+    }
+}
 
-    return connect<object, object, object, RootState>(mapStateToProps, mapDispatchToProps)(GithubReposContainer);
-};
+const mapDispatchToProps = (dispatch: Dispatch<GithubReposActions>) => {
+    return {
+        fetchOrganizationRepositories: (organization: types.FetchReposAction['payload']) => dispatch(actions.fetchOrganizationRepositoriesAction(organization))
+    }
+}
+
+const mapStateToProps = (store: RootState) => {
+    return {
+        reqStatus: store.reqStatus,
+        githubRepos: store.githubRepos
+    }
+}
+
+export const withGithubRepos = connect(mapStateToProps, mapDispatchToProps)(GithubReposContainer)
 

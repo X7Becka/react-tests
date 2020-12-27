@@ -1,10 +1,3 @@
-import {RepoItemType} from "./github-repos";
-
-export type REDUCER_ACTION = {
-    payload: boolean;
-    type: string;
-}
-
 export const REQ_STATUS = "reqStatus/REQ_STATUS"
 export type ReqStatusAction = {
     type: typeof REQ_STATUS

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 export class GithubReposList extends React.PureComponent {
     render() {
@@ -6,6 +6,6 @@ export class GithubReposList extends React.PureComponent {
             <div>
 
             </div>
-        );
+        )
     }
 }

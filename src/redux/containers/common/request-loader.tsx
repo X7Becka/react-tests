@@ -1,7 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {TProps} from "../../types/req-status";
 import {RootState} from "../../root-reducer";
+
+type TProps = ReturnType<typeof mapStateToProps>
 
 class RequestLoader extends React.PureComponent <TProps> {
     mounted = false;
@@ -15,8 +16,8 @@ class RequestLoader extends React.PureComponent <TProps> {
         const status = [
             'request-loader__bar',
             !this.mounted ? 'request-loader__bar--hidden' : '',
-            reqStatus.isFetching ? 'request-loader__bar--90' : 'request-loader__bar--100 ',
-            reqStatus.error ? 'request-loader__bar--error' : ''
+            reqStatus?.isFetching ? 'request-loader__bar--90' : 'request-loader__bar--100 ',
+            reqStatus?.error ? 'request-loader__bar--error' : ''
 
         ];
         return (
@@ -33,5 +34,5 @@ const mapStateToProps = (store: RootState) => {
     };
 };
 
-export default connect<object, object, object, RootState>(mapStateToProps)(RequestLoader);
+export const RequestLoaderContainer = connect(mapStateToProps)(RequestLoader);
 

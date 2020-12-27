@@ -1,0 +1,10 @@
+{
+  "tabWidth": 2,
+  "semi": false,
+  "bracketSpacing": false,
+  "endOfLine": "auto",
+  "trailingComma": "none",
+  "singleQuote": true,
+  "htmlFormatWrapLineLength": 80,
+  "htmlFormatWrapAttributes": "force-expand-multiline"
+}

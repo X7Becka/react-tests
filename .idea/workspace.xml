@@ -2,15 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e91b5e8-2f5b-436f-b811-6dac0a0b806f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.stylelintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/buttons/custom-button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/vars.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/main-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/main-layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/github-repos/github-repos-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/github-repos/github-repos-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/github-repos/github-repos.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/github-repos/github-repos.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/math/math-brackets.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/math/math-brackets.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/math/math-matrix.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/math/math-matrix.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/math/math.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/math/math.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/containers/common/request-loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/containers/common/request-loader.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/containers/github-repos/with-github-repos.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/containers/github-repos/with-github-repos.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/github-repos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/github-repos.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/req-status.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/req-status.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/root-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/root-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/root-saga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/root-saga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/sagas/github-repos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/sagas/github-repos.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/types/github-repos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/types/github-repos.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/types/req-status.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/types/req-status.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/utils/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/utils/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/report-web-vitals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/common/blocks/request-loader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/common/blocks/request-loader.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +43,8 @@
       <list>
         <option value="JavaScript File" />
         <option value="TypeScript File" />
-        <option value="TypeScript JSX File" />
         <option value="SCSS File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -52,14 +73,22 @@
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.stylelint" value="C:\Git\react-tests\node_modules\stylelint" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettier.import.notification.dismissed" value="true" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Git\react-tests\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Git\react-tests\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -108,7 +137,13 @@
       <workItem from="1608711493566" duration="95000" />
       <workItem from="1608711615647" duration="30252000" />
       <workItem from="1608791265975" duration="2938000" />
-      <workItem from="1608841090435" duration="8616000" />
+      <workItem from="1608841090435" duration="9253000" />
+      <workItem from="1608890817679" duration="715000" />
+      <workItem from="1608891548935" duration="251000" />
+      <workItem from="1608893001223" duration="183000" />
+      <workItem from="1608893392570" duration="7294000" />
+      <workItem from="1608980503020" duration="14906000" />
+      <workItem from="1609051921935" duration="29541000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1608320112776</created>
@@ -152,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608757487315</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="types...................">
+      <created>1608855652747</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608855652747</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,7 +210,8 @@
     <MESSAGE value="math-tasks" />
     <MESSAGE value="menu" />
     <MESSAGE value="types......................" />
-    <option name="LAST_COMMIT_MESSAGE" value="types......................" />
+    <MESSAGE value="types..................." />
+    <option name="LAST_COMMIT_MESSAGE" value="types..................." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

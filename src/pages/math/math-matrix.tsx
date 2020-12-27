@@ -4,13 +4,13 @@
  * Also matrix doesn't work with just single row or column. That's it.
  */
 
-import React from 'react';
+import React from 'react'
 
-export class MathMatrix extends React.PureComponent<{}, IState> {
-    constructor(props: {}) {
-        super(props);
+export class MathMatrix extends React.PureComponent<Record<string, never>, IState> {
+    constructor(props: Record<string, never>) {
+        super(props)
         this.state = {
-            twoDimensionalArray: null,
+            twoDimensionalArray: undefined,
             rows: 4,
             columns: 6
         }
@@ -30,18 +30,18 @@ export class MathMatrix extends React.PureComponent<{}, IState> {
         return (
             <div className="math-matrix">
                 <div className="math-matrix__form">
-                    <input type="number" placeholder="rows" value={rows} onChange={this.handleDimensions("rows")}/>
-                    <input type="number" placeholder="columns" value={columns} onChange={this.handleDimensions("columns")}/>
+                    <input type="number" placeholder="rows" value={rows} onChange={this.handleDimensions('rows')}/>
+                    <input type="number" placeholder="columns" value={columns} onChange={this.handleDimensions('columns')}/>
                     <button onClick={() => this.generate2DArray()}>Generate matrix</button>
                 </div>
                 {this.matrix}
             </div>
-        );
+        )
     }
 
     generate2DArray = () => {
         const {rows, columns} = this.state
-        const arr: Array<Array<number>> = [];
+        const arr: Array<Array<number>> = []
         let currentCount = 1
         let rowStart = 0
         let rowEnd = rows - 1
@@ -123,13 +123,13 @@ export class MathMatrix extends React.PureComponent<{}, IState> {
      *
      * @param type accepts only two types: rows and columns.
      */
-    handleDimensions = (type: "rows" | "columns") => (e: React.SyntheticEvent) => {
+    handleDimensions = (type: 'rows' | 'columns') => (e: React.SyntheticEvent) => {
         this.setState({[type]: (e.target as HTMLTextAreaElement).value} as unknown as Pick<IState, keyof IState>)
     }
 }
 
 interface IState {
-    twoDimensionalArray: null | Array<Array<number>>
+    twoDimensionalArray?: Array<Array<number>>
     rows: number,
     columns: number
 }

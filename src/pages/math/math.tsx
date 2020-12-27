@@ -1,6 +1,6 @@
-import React from 'react';
-import {MathMatrix} from "./math-matrix";
-import {MathBrackets} from "./math-brackets";
+import React from 'react'
+import {MathMatrix} from './math-matrix'
+import {MathBrackets} from './math-brackets'
 
 export class Math extends React.PureComponent  {
 
