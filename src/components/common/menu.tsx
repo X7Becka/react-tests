@@ -1,23 +1,20 @@
 import React from 'react'
-import {Link, Router} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 import {CustomButton} from '../buttons/custom-button'
+import {RouteComponentProps} from 'react-router'
 
-
-
-export class Menu extends React.PureComponent {
+class Menu extends React.PureComponent<RouteComponentProps> {
     private _urls: Array<{
             url: string
             label: string
         }>
 
-
-    constructor(props: Record<string, never>) {
+    constructor(props: RouteComponentProps) {
         super(props)
         this._urls = [
             {url: '/math', label: 'Математический тест'},
             {url: '/github-repos', label: 'Работа с апи гитхаба'}
-
-            ]
+        ]
     }
 
     render(): JSX.Element {
@@ -31,13 +28,19 @@ export class Menu extends React.PureComponent {
     }
 
     get buttons(): JSX.Element[] {
-
         return this._urls.map(item => {
             return (
-                <CustomButton key={item.url} className="menu__button" component={Link} to={item.url}>
+                <CustomButton key={item.url}
+                    className="menu__button"
+                    component={Link}
+                    to={item.url}
+                    disabled={this.props.location.pathname === item.url}
+                >
                     {item.label}
                 </CustomButton>
             )
         })
     }
 }
+
+export default withRouter(Menu)

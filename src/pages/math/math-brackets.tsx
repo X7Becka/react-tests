@@ -1,7 +1,7 @@
 import React from 'react'
 
 export class MathBrackets extends React.PureComponent {
-    render() {
+    render(): JSX.Element {
         return (
             <div className="math-expression">
                 <div className="math-expression__title">Expression-balance checking</div>
@@ -30,7 +30,7 @@ export class MathBrackets extends React.PureComponent {
      * @param expression
      * @param brackets
      */
-    isBracketStructureValid = (expression: string, brackets: string) => {
+    isBracketStructureValid = (expression: string, brackets: string): string => {
         /**
          * Temporary array to contain open brackets
          */

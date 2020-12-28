@@ -1,5 +1,5 @@
-import { call, put, takeEvery } from 'redux-saga/effects'
-import { fetchOrganizationRepositoriesApi } from '../utils/api'
+import {call, put, takeEvery} from 'redux-saga/effects'
+import {fetchOrganizationRepositoriesApi} from '../utils/api'
 import {receiveOrganizationRepositoriesAction} from '../actions/github-repos'
 import * as types from '../types/github-repos'
 import {reqErrorAction, reqStatusAction} from '../actions/req-status'

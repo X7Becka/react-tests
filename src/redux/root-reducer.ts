@@ -1,7 +1,7 @@
-import {CombinedState, combineReducers} from 'redux';
+import {combineReducers} from 'redux'
 
-import {githubReposReducer, GithubReposState} from './reducers/github-repos';
-import {reqStatusReducer, ReqStatusState} from "./reducers/req-status";
+import {githubReposReducer, GithubReposState} from './reducers/github-repos'
+import {reqStatusReducer, ReqStatusState} from './reducers/req-status'
 
 export const rootReducer = combineReducers<RootState>({
     githubRepos: githubReposReducer,

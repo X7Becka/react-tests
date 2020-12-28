@@ -16,22 +16,29 @@ export class MathMatrix extends React.PureComponent<Record<string, never>, IStat
         }
     }
 
-
     /**
      * Mounting component and immediately generating demo-matrix that further will free to change.
      */
-    componentDidMount() {
+    componentDidMount(): void {
         this.generate2DArray()
     }
 
-    render() {
+    render(): JSX.Element {
         const {rows, columns} = this.state
 
         return (
             <div className="math-matrix">
                 <div className="math-matrix__form">
-                    <input type="number" placeholder="rows" value={rows} onChange={this.handleDimensions('rows')}/>
-                    <input type="number" placeholder="columns" value={columns} onChange={this.handleDimensions('columns')}/>
+                    <input type="number"
+                        placeholder="rows"
+                        value={rows}
+                        onChange={this.handleDimensions('rows')}
+                    />
+                    <input type="number"
+                        placeholder="columns"
+                        value={columns}
+                        onChange={this.handleDimensions('columns')}
+                    />
                     <button onClick={() => this.generate2DArray()}>Generate matrix</button>
                 </div>
                 {this.matrix}
@@ -39,7 +46,7 @@ export class MathMatrix extends React.PureComponent<Record<string, never>, IStat
         )
     }
 
-    generate2DArray = () => {
+    generate2DArray = (): void => {
         const {rows, columns} = this.state
         const arr: Array<Array<number>> = []
         let currentCount = 1
@@ -96,16 +103,20 @@ export class MathMatrix extends React.PureComponent<Record<string, never>, IStat
     /**
      * getter that computes and render matrix right after we invoke "Generate2DArray".
      */
-    get matrix() {
+    get matrix(): JSX.Element {
         const {twoDimensionalArray} = this.state
         const rows = twoDimensionalArray?.map((row, index) => {
             const rowItem = row.map((item, index) => {
                 return (
-                    <div key={index} className="math-matrix__matrix-item">{item}</div>
+                    <div key={index}
+                        className="math-matrix__matrix-item"
+                    >{item}</div>
                 )
             })
             return (
-                <div key={index} className="math-matrix__matrix-row">
+                <div key={index}
+                    className="math-matrix__matrix-row"
+                >
                     {rowItem}
                 </div>
             )
@@ -123,7 +134,7 @@ export class MathMatrix extends React.PureComponent<Record<string, never>, IStat
      *
      * @param type accepts only two types: rows and columns.
      */
-    handleDimensions = (type: 'rows' | 'columns') => (e: React.SyntheticEvent) => {
+    handleDimensions = (type: 'rows' | 'columns') => (e: React.SyntheticEvent): void => {
         this.setState({[type]: (e.target as HTMLTextAreaElement).value} as unknown as Pick<IState, keyof IState>)
     }
 }

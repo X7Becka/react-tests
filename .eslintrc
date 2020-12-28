@@ -1,7 +1,8 @@
 {
   "plugins": [
     "unicorn",
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "react"
   ],
   "parser": "@typescript-eslint/parser",
   "env": {
@@ -10,9 +11,9 @@
     "node": true
   },
   "extends": [
-    "plugin:react/recommended",
+    "plugin:unicorn/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:unicorn/recommended"
+    "plugin:react/recommended"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -23,18 +24,37 @@
   },
   "settings": {
     "react": {
-      "version": "detect"
-    }
+      "version": "detect",
+      "createClass": "createReactClass",
+      "pragma": "React",
+      "fragment": "Fragment"
+    },
+    "propWrapperFunctions": [
+      "forbidExtraProps",
+      {"property": "freeze", "object": "Object"},
+      {"property": "myFavoriteWrapper"}
+    ],
+    "linkComponents": [
+      "Hyperlink",
+      {"name": "Link", "linkAttribute": "to"}
+    ]
   },
   "rules": {
     "semi": ["warn","never"],
     "quotes": ["warn", "single"],
     "semi-spacing": "warn",
-    "no-unused-vars": "warn",
     "no-console": "warn",
+    "object-curly-spacing": "warn",
+    "object-shorthand": "warn",
+    "indent": "warn",
     "unicorn/prevent-abbreviations": "off",
     "unicorn/consistent-function-scoping": "off",
-    "object-curly-spacing": "warn",
-    "object-shorthand": "warn"
+    "react/jsx-first-prop-new-line": "off",
+//    "react/jsx-prop-new-line": "warn", //BUGGY. Definition for rule 'react/jsx-prop-new-line' was not found
+    "react/jsx-max-props-per-line": ["warn", {"maximum": 1}],
+    "react/jsx-closing-bracket-location": ["warn", "line-aligned"],
+    "react/jsx-uses-react": "warn",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "off"
   }
 }

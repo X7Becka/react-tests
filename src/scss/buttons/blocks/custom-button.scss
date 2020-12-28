@@ -1,0 +1,11 @@
+.custom-button {
+  &.custom-button__wrapper {
+    background-color: #364616;
+    margin: 0 8px;
+
+    &.Mui-disabled {
+      background-color: transparent;
+      color: rgba(var(--main-text), 0.5);
+    }
+  }
+}

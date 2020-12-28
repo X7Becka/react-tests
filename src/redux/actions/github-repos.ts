@@ -1,4 +1,4 @@
-import * as actions from "../types/github-repos";
+import * as actions from '../types/github-repos'
 
 export function fetchOrganizationRepositoriesAction(organization: actions.FetchReposAction['payload']): actions.FetchReposAction {
     return {

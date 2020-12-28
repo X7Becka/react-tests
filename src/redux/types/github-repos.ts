@@ -7,7 +7,7 @@ export type FetchReposAction = {
 export const RECEIVE_ORGANIZATION_REPOSITORIES = 'githubRepos/RECEIVE_ORGANIZATION_REPOSITORIES'
 export type ReceiveReposAction = {
     type: typeof RECEIVE_ORGANIZATION_REPOSITORIES
-    payload: Array<RepoItemType>
+    payload: Array<GithubReposItemType>
 }
 
 export type GithubReposActions =
@@ -16,7 +16,7 @@ export type GithubReposActions =
 
 
 
-export type RepoItemType = {
+export type GithubReposItemType = {
     id: number;
     name: string;
     git_url: string;

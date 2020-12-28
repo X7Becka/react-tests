@@ -2,14 +2,14 @@ import React from 'react'
 import {connect} from 'react-redux'
 import * as actions from '../../actions/github-repos'
 import * as types from '../../types/github-repos'
-import {GithubReposActions, RepoItemType} from '../../types/github-repos'
+import {GithubReposActions, GithubReposItemType} from '../../types/github-repos'
 import {RootState} from '../../root-reducer'
 import {Dispatch} from 'redux'
 import {RouteComponentProps} from 'react-router'
 import {GithubRepos} from '../../../pages/github-repos/github-repos'
 
 export type GithubReposEnhancedTProps = {
-    githubRepos: {repositoryList: Array<RepoItemType>}
+    githubRepos: {repositoryList: Array<GithubReposItemType>}
 }
 
 

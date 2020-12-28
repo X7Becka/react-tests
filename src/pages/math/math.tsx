@@ -4,7 +4,7 @@ import {MathBrackets} from './math-brackets'
 
 export class Math extends React.PureComponent  {
 
-    render() {
+    render(): JSX.Element {
         return (
             <div className="math">
                 <MathMatrix/>
