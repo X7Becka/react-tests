@@ -56,7 +56,7 @@ export class MathBrackets extends React.PureComponent {
              */
             else if (bin.pop() !== bracketIndex) return `${expression} UNBALANCED.`
         }
-
+        if (bin.length > 0) return `${expression} UNBALANCED.`
         /**
          * If bin are empty - brackets are equal
          */

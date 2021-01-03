@@ -16,8 +16,8 @@ class RequestLoader extends React.PureComponent <TProps> {
         const status = [
             'request-loader__bar',
             !this.mounted ? 'request-loader__bar--hidden' : '',
-            reqStatus?.isFetching ? 'request-loader__bar--90' : 'request-loader__bar--100 ',
-            reqStatus?.error ? 'request-loader__bar--error' : ''
+            reqStatus?.state === 'loading' ? 'request-loader__bar--90' : 'request-loader__bar--100',
+            reqStatus?.state === 'error' ? 'request-loader__bar--error' : ''
 
         ]
         return (

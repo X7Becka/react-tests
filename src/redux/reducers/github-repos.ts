@@ -3,11 +3,11 @@ import * as actions from './../types/github-repos'
 import {Reducer} from 'redux'
 
 export type GithubReposState = {
-    readonly repositoryList: Array<GithubReposItemType>
+    readonly repositoryList?: Array<GithubReposItemType>
 }
 
 const initialState: GithubReposState = {
-    repositoryList: []
+    repositoryList: undefined
 }
 
 export const githubReposReducer: Reducer<GithubReposState, actions.GithubReposActions> = (state = initialState, action) => {

@@ -32,6 +32,5 @@ function errorHandler(error: {response: {status: number}}) {
 }
 
 export function fetchOrganizationRepositoriesApi(organization = 'X7Becka'): Promise<void | AxiosResponse<GithubReposItemType[]>> {
-    console.log('API')
     return axios.get(`${api}/orgs/${organization}/repos`)
 }

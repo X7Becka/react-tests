@@ -2,7 +2,7 @@ import {call, put, takeEvery} from 'redux-saga/effects'
 import {fetchOrganizationRepositoriesApi} from '../utils/api'
 import {receiveOrganizationRepositoriesAction} from '../actions/github-repos'
 import * as types from '../types/github-repos'
-import {reqErrorAction, reqStatusAction} from '../actions/req-status'
+import {reqStatusAction} from '../actions/req-status'
 
 
 export function* watchGetOrganizationRepositories() {
@@ -11,12 +11,13 @@ export function* watchGetOrganizationRepositories() {
 
 function* callGetOrganizationRepositories({payload}: types.FetchReposAction) {
     try {
+        yield put(reqStatusAction('loading'))
         const response = yield call(fetchOrganizationRepositoriesApi, payload)
-        yield put(reqStatusAction(true))
         yield put(receiveOrganizationRepositoriesAction(response.data))
-        yield put(reqStatusAction(false))
+        yield put(reqStatusAction('complete'))
     } catch(error) {
         console.log(error, 'error')
-        yield put(reqErrorAction(true))
+        yield put(reqStatusAction('error'))
+        yield put(receiveOrganizationRepositoriesAction([]))
     }
 }

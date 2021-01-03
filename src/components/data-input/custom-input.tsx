@@ -1,17 +1,24 @@
 import React, {FormEventHandler} from 'react'
-import {Input} from '@material-ui/core'
+import Input from '@material-ui/core/Input'
+import FormControl from '@material-ui/core/FormControl'
+import InputLabel from '@material-ui/core/InputLabel'
+// import {FormControl, InputLabel, Input} from '@material-ui/core'
 
 export class CustomInput extends React.PureComponent <TProps> {
     render(): JSX.Element {
-        const {className, onInput} = this.props
+        const {className, onInput, isLoading, label} = this.props
         const props: TProps = {
-            className: `${className} custom-input custom-input__wrapper`,
+            className: `${className} ${isLoading && 'custom-input__loading'}`,
+            variant: 'standard',
             onInput
         }
         return (
-            <Input  {...props}>
-
-            </Input>
+            <FormControl classes={{root: 'custom-input'}}>
+                <InputLabel classes={{root: 'custom-input__label'}}>{label}</InputLabel>
+                <Input classes={{root: 'custom-input__input', focused: 'custom-input__input--focused'}}
+                    {...props}
+                />
+            </FormControl>
         )
     }
 }
@@ -19,4 +26,7 @@ export class CustomInput extends React.PureComponent <TProps> {
 type TProps = {
     className: string
     onInput?: FormEventHandler<HTMLDivElement>
+    isLoading?: boolean
+    label?: string
+    variant?: 'standard' | 'filled' | 'outlined'
 }

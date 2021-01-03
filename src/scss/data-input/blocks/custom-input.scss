@@ -1,5 +1,82 @@
-.custom-input {
-  &.custom-input__wrapper {
-    color: rgba(var(--lighter-text), 1);
+.MuiFormControl-root {
+  .custom-input {
+    &__input {
+      color: rgba(var(--lighter-text), 1);
+      background-color: #333;
+      padding-left: 4px;
+      padding-right: 4px;
+
+      &::after {
+        border-bottom: none;
+        background-color: rgba(var(--main-text), 1);
+        height: 2px;
+        width: 0;
+        transition: 0.2s;
+        margin: 0 auto;
+      }
+
+      &::before {
+        border-bottom: none !important;
+      }
+
+      &--focused {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+
+    &__label {
+      color: rgba(var(--main-text), 0.5);
+      z-index: 1;
+      pointer-events: none;
+
+      &--filled {
+        color: rgba(var(--main-text), 1);
+      }
+    }
+
+    &__loading {
+      &.MuiInput-underline {
+        &::after {
+          content: '';
+          animation: position 2s infinite linear, width 3s infinite linear;
+
+          @keyframes position {
+            from {
+              left: 50px;
+              right: 0;
+              transform: translateX(-100px);
+            }
+
+            50% {
+              left: 100%;
+              right: 50px;
+              transform: translateX(0);
+            }
+
+            to {
+              left: 50px;
+              right: 0;
+              transform: translateX(-100px);
+            }
+          }
+
+          @keyframes width {
+            from {
+              width: 50px;
+            }
+
+            50% {
+              width: 0;
+            }
+
+            to {
+              width: 50px;
+            }
+          }
+        }
+      }
+    }
   }
 }
