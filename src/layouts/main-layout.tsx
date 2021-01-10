@@ -8,17 +8,19 @@ export class MainLayout extends React.PureComponent {
     render(): JSX.Element {
 
         return (
-            <Router>
-                <Menu />
-                <div className="main-layout__content">
-                    <Route path="/github-repos"
-                        component={withGithubRepos}
-                    />
-                    <Route path="/math"
-                        component={Math}
-                    />
-                </div>
-            </Router>
+            <div className="main-layout">
+                <Router>
+                    <Menu />
+                    <div className="main-layout__content">
+                        <Route path="/github-repos"
+                            component={withGithubRepos}
+                        />
+                        <Route path="/math"
+                            component={Math}
+                        />
+                    </div>
+                </Router>
+            </div>
         )
     }
 }

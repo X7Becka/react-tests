@@ -14,12 +14,12 @@ import {GithubReposState} from '../../reducers/github-repos'
 export type GithubReposEnhancedTProps = {
     githubRepos: GithubReposState
     reqStatus: ReqStatusState
-    searchRepositories: (organization: types.FetchReposAction['payload']) => void
+    searchRepositories: <P extends types.FetchReposAction['payload']>(organization: P['organization'], page: P['page']) => void
     isFetchingRepos: boolean
 }
 
 export type GithubReposEnhancedTState = {
-
+    searchQuery: string
 }
 
 type TProps = ReturnType<typeof mapDispatchToProps> & ReturnType<typeof mapStateToProps> & RouteComponentProps
@@ -27,10 +27,6 @@ type TProps = ReturnType<typeof mapDispatchToProps> & ReturnType<typeof mapState
 
 class GithubReposContainer extends React.PureComponent <TProps> {
     isFetchingRepos = false
-
-    // componentDidMount = () => {
-    //
-    // }
 
     render = () => {
         const {githubRepos, reqStatus} = this.props
@@ -40,30 +36,21 @@ class GithubReposContainer extends React.PureComponent <TProps> {
             searchRepositories: this.searchRepositories,
             isFetchingRepos: this.isFetchingRepos
         }
-console.log(this.isFetchingRepos, 'this.isFetchingRepos')
+
         return <GithubRepos {...props} />
     }
 
-    searchRepositories = async (value: types.FetchReposAction['payload']) => {
+    searchRepositories = async <P extends types.FetchReposAction['payload']>(organization: P['organization'], page: P['page']) => {
         const {fetchOrganizationRepositories} = this.props
         this.isFetchingRepos = true
-        await fetchOrganizationRepositories(value)
+        await fetchOrganizationRepositories(organization, page)
         this.isFetchingRepos = false
     }
-
-    // onSearch = (value: types.FetchReposAction['payload']) => new Promise((resolve, reject) => {
-    //     const {fetchOrganizationRepositories} = this.props
-    //     console.log(fetchOrganizationRepositories(value), 'fetchOrganizationRepositories(value)')
-    // })
-
-    // _init = () => {
-    //
-    // }
 }
 
 const mapDispatchToProps = (dispatch: Dispatch<GithubReposActions | ReqStatusActions>) => {
     return {
-        fetchOrganizationRepositories: (organization: types.FetchReposAction['payload']) => dispatch(actions.fetchOrganizationRepositoriesAction(organization))
+        fetchOrganizationRepositories: <P extends types.FetchReposAction['payload']>(organization: P['organization'], page: P['page']) => dispatch(actions.fetchOrganizationRepositoriesAction(organization, page))
     }
 }
 

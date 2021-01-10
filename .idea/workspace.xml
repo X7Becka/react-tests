@@ -2,29 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e91b5e8-2f5b-436f-b811-6dac0a0b806f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/scss/pages/github-repos/blocks/github-repos.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/pages/github-repos/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/babelrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/svg/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/buttons/custom-pagination.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/components/buttons/blocks/custom-button.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/components/buttons/blocks/custom-pagination.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/components/buttons/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/layouts/blocks/main-layout.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/layouts/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/pages/github-repos/blocks/github-repos-item.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/pages/github-repos/blocks/github-repos-list.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.stylelintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.stylelintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/utils/debouncer.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/data-input/custom-input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/data-input/custom-input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/main-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/main-layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/github-repos/github-repos-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/github-repos/github-repos-item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/github-repos/github-repos-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/github-repos/github-repos-list.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/github-repos/github-repos.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/github-repos/github-repos.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/math/math-brackets.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/math/math-brackets.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions/req-status.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/req-status.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/containers/common/request-loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/containers/common/request-loader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions/github-repos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/github-repos.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/containers/github-repos/with-github-repos.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/containers/github-repos/with-github-repos.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducers/github-repos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/github-repos.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/req-status.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/req-status.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/sagas/github-repos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/sagas/github-repos.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/types/req-status.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/types/req-status.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/types/github-repos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/types/github-repos.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/utils/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/utils/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/common/blocks/request-loader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/common/blocks/request-loader.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/data-input/blocks/custom-input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/data-input/blocks/custom-input.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/pages/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/buttons/blocks/custom-button.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/buttons/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/common/blocks/request-loader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/common/blocks/request-loader.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/common/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/common/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/common/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/data-input/blocks/custom-input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/data-input/blocks/custom-input.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/data-input/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/data-input/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/pages/github-repos/blocks/github-repos.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/github-repos/blocks/github-repos.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/pages/github-repos/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/github-repos/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/vars.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/utils.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +52,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
         <option value="SCSS File" />
       </list>
     </option>
@@ -56,6 +73,9 @@
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1ln1FDKiRvWh8I709GpFJ8FNO8m" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -71,7 +91,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Program Files/Git/bin/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/scss/components" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -91,9 +111,15 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettier.import.notification.dismissed" value="true" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Git\react-tests\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.CSS" />
     <property name="ts.external.directory.path" value="C:\Git\react-tests\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Git\react-tests\src\scss\components" />
+      <recent name="C:\Git\react-tests\src\scss\components\common\blocks" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="renders learn react link" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
@@ -158,7 +184,13 @@
       <workItem from="1609570736049" duration="35000" />
       <workItem from="1609570795684" duration="117000" />
       <workItem from="1609570952463" duration="26295000" />
-      <workItem from="1609652155486" duration="4843000" />
+      <workItem from="1609652155486" duration="4963000" />
+      <workItem from="1609785298988" duration="3065000" />
+      <workItem from="1609790575005" duration="351000" />
+      <workItem from="1609823967038" duration="7167000" />
+      <workItem from="1610125119494" duration="15000" />
+      <workItem from="1610125145206" duration="14300000" />
+      <workItem from="1610302104649" duration="9317000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1608320112776</created>
@@ -223,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609181755663</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="some styles">
+      <created>1609704441850</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1609704441850</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,7 +281,8 @@
     <MESSAGE value="types..................." />
     <MESSAGE value="theme-provider etc..." />
     <MESSAGE value="data" />
-    <option name="LAST_COMMIT_MESSAGE" value="data" />
+    <MESSAGE value="some styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="some styles" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

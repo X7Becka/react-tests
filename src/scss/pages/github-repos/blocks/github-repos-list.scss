@@ -1,0 +1,15 @@
+.github-repos-list {
+  display: flex;
+  flex-grow: 1;
+
+  &:hover {
+    .ScrollbarsCustom {
+      &-Wrapper {
+        inset: 0 19px 0 0 !important;
+      }
+      &-Track {
+        width: 15px !important;
+      }
+    }
+  }
+}

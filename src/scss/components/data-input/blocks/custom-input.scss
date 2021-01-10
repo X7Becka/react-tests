@@ -1,14 +1,14 @@
 .MuiFormControl-root {
   .custom-input {
     &__input {
-      color: rgba(var(--lighter-text), 1);
+      color: rgba(var(--main-lighter), 1);
       background-color: #333;
       padding-left: 4px;
       padding-right: 4px;
 
       &::after {
         border-bottom: none;
-        background-color: rgba(var(--main-text), 1);
+        background-color: rgba(var(--main), 1);
         height: 2px;
         width: 0;
         transition: 0.2s;
@@ -27,12 +27,22 @@
     }
 
     &__label {
-      color: rgba(var(--main-text), 0.5);
+      color: rgba(var(--main), 0.5);
       z-index: 1;
       pointer-events: none;
+      transform: translate(0, 8px) scale(1);
+      margin-left: 4px;
+
+      + .custom-input__input {
+        margin-top: 0;
+      }
 
       &--filled {
-        color: rgba(var(--main-text), 1);
+        color: rgba(var(--main), 1);
+      }
+
+      &.MuiInputLabel-shrink {
+        transform: translate(0, -14px) scale(0.8);
       }
     }
 

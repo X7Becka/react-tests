@@ -1,7 +1,21 @@
 :root {
   --main-background: 41, 42, 45;
-  --main-text: 171, 200, 0;
-  --lighter-text: 255, 253, 111;
+  --main: 171, 200, 0;
+  --main-lighter: 255, 253, 111;
   --tr-func: cubic-bezier(0, 0.55, 0.45, 1);
   --tr-dur: 0.3s;
+}
+
+@mixin transition($properties: all, $duration: var(--tr-dur), $method: var(--tr-func)) {
+  $value: ();
+
+  @each $property in $properties {
+    @if length($value) > 0 {
+      $value: append($value, unquote(",") #{$property} $duration $method);
+    } @else {
+      $value: append($value, #{$property} $duration $method);
+    }
+  }
+
+  transition: $value;
 }

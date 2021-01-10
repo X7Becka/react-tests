@@ -10,7 +10,7 @@
   &__bar {
     width: 0;
     height: 100%;
-    background-color: rgba(var(--main-text), 1);
+    background-color: rgba(var(--main), 1);
 
     &--90 {
       animation: progress-90 5s ease;

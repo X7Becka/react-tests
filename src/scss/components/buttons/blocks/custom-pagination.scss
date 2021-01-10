@@ -1,0 +1,9 @@
+.custom-pagination {
+  .MuiPaginationItem-root {
+    color: rgba(var(--main), 1);
+  }
+
+  .MuiPaginationItem-page.Mui-selected {
+    background-color: rgba(var(--main), 0.1);
+  }
+}

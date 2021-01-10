@@ -1,5 +1,5 @@
 import AXIOS, {AxiosResponse} from 'axios'
-import {GithubReposItemType} from '../types/github-repos'
+import {GithubReposTItem} from '../types/github-repos'
 
 const api = 'https://api.github.com'
 
@@ -31,6 +31,6 @@ function errorHandler(error: {response: {status: number}}) {
     throw error
 }
 
-export function fetchOrganizationRepositoriesApi(organization = 'X7Becka'): Promise<void | AxiosResponse<GithubReposItemType[]>> {
-    return axios.get(`${api}/orgs/${organization}/repos`)
+export function fetchOrganizationRepositoriesApi(organization: string, page: number): Promise<void | AxiosResponse<GithubReposTItem[]>> {
+    return axios.get(`${api}/orgs/${organization}/repos?page=${page}`)
 }

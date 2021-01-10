@@ -8,7 +8,7 @@ html, body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: rgba(var(--main-text), 1);
+  color: rgba(var(--main), 1);
   overflow: hidden;
 }
 
@@ -72,7 +72,6 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box;
   padding: 0;
 }
 
@@ -80,7 +79,31 @@ textarea {
   -webkit-appearance: button;
   font: inherit;
 }
-//
-//.main-layout__content {
-//  height: calc(100vh - 64px);
-//}
+
+* {
+  box-sizing: border-box;
+}
+
+.ScrollbarsCustom {
+  &-Content {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: auto !important;
+  }
+
+  &-Track {
+    background: rgba(var(--main), 0.1) !important;
+    width: 6px !important;
+    border-radius: 10px !important;
+    @include transition(width);
+  }
+
+  &-Thumb {
+    background: rgba(var(--main), 0.6) !important;
+    border-radius: 10px !important;
+  }
+
+  &-Wrapper {
+    @include transition(inset);
+  }
+}
