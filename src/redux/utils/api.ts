@@ -1,7 +1,8 @@
 import AXIOS, {AxiosResponse} from 'axios'
 import {GithubReposTItem} from '../types/github-repos'
 
-const api = 'https://api.github.com'
+const gitAPI = 'https://api.github.com'
+const itunesAPI = 'https://itunes.apple.com/search'
 
 type RequestTypes<URL = string, Options = Record<string, unknown>, Data = Record<string, unknown>> = {
     get: (url: URL, options?: Options) => Promise<void | AxiosResponse>
@@ -32,5 +33,9 @@ function errorHandler(error: {response: {status: number}}) {
 }
 
 export function fetchOrganizationRepositoriesApi(organization: string, page: number): Promise<void | AxiosResponse<GithubReposTItem[]>> {
-    return axios.get(`${api}/orgs/${organization}/repos?page=${page}`)
+    return axios.get(`${gitAPI}/orgs/${organization}/repos?page=${page}`)
+}
+
+export function getProductsApi(productName: string, page: number): Promise<void | AxiosResponse<any>> {
+    return axios.get(`${itunesAPI}?term=${productName}`)
 }

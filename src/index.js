@@ -6,13 +6,14 @@ import './index.scss'
 import MaterialTheme from './assets/theme/material-theme.json'
 
 import {MainLayout} from './layouts/main-layout'
-// import reportWebVitals from './report-web-vitals'
+
 import {Provider} from 'react-redux'
 import configureStore from './redux/store'
 import {RequestLoaderContainer} from './redux/containers/common/request-loader'
 import {createMuiTheme, ThemeProvider} from '@material-ui/core/styles'
 import {Router} from 'react-router-dom'
 import * as createHistory from 'history'
+// import reportWebVitals from './report-web-vitals'
 
 const store = configureStore()
 const theme = createMuiTheme(MaterialTheme)
@@ -22,11 +23,9 @@ ReactDOM.render(
     <Provider store={store}>
         <Router history={history}>
             <RequestLoaderContainer />
-            <React.StrictMode>
-                <ThemeProvider theme={theme}>
-                    <MainLayout />
-                </ThemeProvider>
-            </React.StrictMode>
+            <ThemeProvider theme={theme}>
+                <MainLayout />
+            </ThemeProvider>
         </Router>
     </Provider>,
     document.querySelector('#root')

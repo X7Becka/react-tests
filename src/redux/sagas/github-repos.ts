@@ -5,7 +5,7 @@ import * as types from '../types/github-repos'
 import {reqStatusAction} from '../actions/req-status'
 import {githubAPIv3PaginationParser} from '../../utils/utils'
 
-export function* watchGetOrganizationRepositories() {
+export function* watchGithubReposSaga() {
     yield takeEvery(types.FETCH_ORGANIZATION_REPOSITORIES, callGetOrganizationRepositories)
 }
 

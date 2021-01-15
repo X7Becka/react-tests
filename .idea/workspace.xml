@@ -2,46 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e91b5e8-2f5b-436f-b811-6dac0a0b806f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/babelrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/svg/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/buttons/custom-pagination.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/components/buttons/blocks/custom-button.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/components/buttons/blocks/custom-pagination.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/components/buttons/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/layouts/blocks/main-layout.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/layouts/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/pages/github-repos/blocks/github-repos-item.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/pages/github-repos/blocks/github-repos-list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/itunes/itunes-card.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/itunes/itunes-cart.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/itunes/itunes-header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/itunes/itunes-list.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/itunes/itunes.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/actions/itunes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/containers/itunes/with-itunes.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/reducers/itunes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/sagas/itunes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/types/itunes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-card.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-cart.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-header.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/pages/itunes/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.stylelintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.stylelintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/svg/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/svg/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/buttons/custom-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buttons/custom-button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/menu.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/data-input/custom-input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/data-input/custom-input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/main-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/main-layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/github-repos/github-repos-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/github-repos/github-repos-item.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/github-repos/github-repos-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/github-repos/github-repos-list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/github-repos/github-repos.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/github-repos/github-repos.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions/github-repos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/github-repos.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/containers/github-repos/with-github-repos.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/containers/github-repos/with-github-repos.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/github-repos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/github-repos.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/root-action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/root-action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/root-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/root-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/root-saga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/root-saga.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/sagas/github-repos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/sagas/github-repos.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/types/github-repos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/types/github-repos.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/utils/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/utils/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/buttons/blocks/custom-button.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/buttons/index.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/common/blocks/request-loader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/common/blocks/request-loader.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/common/index.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/common/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/common/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/data-input/blocks/custom-input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/data-input/blocks/custom-input.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/data-input/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/data-input/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/pages/github-repos/blocks/github-repos.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/github-repos/blocks/github-repos.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/pages/github-repos/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/github-repos/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/vars.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/buttons/blocks/custom-button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/buttons/blocks/custom-button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/common/blocks/menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/common/blocks/menu.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/pages/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/index.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +87,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/scss/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/img" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -111,11 +107,14 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettier.import.notification.dismissed" value="true" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Git\react-tests\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.CSS" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="ts.external.directory.path" value="C:\Git\react-tests\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Git\react-tests\src\assets\img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Git\react-tests\src\scss\components" />
       <recent name="C:\Git\react-tests\src\scss\components\common\blocks" />
@@ -190,7 +189,15 @@
       <workItem from="1609823967038" duration="7167000" />
       <workItem from="1610125119494" duration="15000" />
       <workItem from="1610125145206" duration="14300000" />
-      <workItem from="1610302104649" duration="9317000" />
+      <workItem from="1610302104649" duration="10184000" />
+      <workItem from="1610372780429" duration="765000" />
+      <workItem from="1610441536033" duration="1301000" />
+      <workItem from="1610464479912" duration="9338000" />
+      <workItem from="1610517358633" duration="8750000" />
+      <workItem from="1610541668896" duration="16575000" />
+      <workItem from="1610602624920" duration="26358000" />
+      <workItem from="1610659964448" duration="3097000" />
+      <workItem from="1610732625262" duration="14673000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1608320112776</created>
@@ -262,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609704441850</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="little bit pagination">
+      <created>1610311507218</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1610311507218</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +296,8 @@
     <MESSAGE value="theme-provider etc..." />
     <MESSAGE value="data" />
     <MESSAGE value="some styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="some styles" />
+    <MESSAGE value="little bit pagination" />
+    <option name="LAST_COMMIT_MESSAGE" value="little bit pagination" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

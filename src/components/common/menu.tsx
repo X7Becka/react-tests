@@ -12,8 +12,9 @@ class Menu extends React.PureComponent<RouteComponentProps> {
     constructor(props: RouteComponentProps) {
         super(props)
         this._urls = [
+            {url: '/github-repos', label: 'Работа с апи гитхаба'},
             {url: '/math', label: 'Математический тест'},
-            {url: '/github-repos', label: 'Работа с апи гитхаба'}
+            {url: '/itunes', label: 'Itunes products'}
         ]
     }
 
@@ -34,7 +35,7 @@ class Menu extends React.PureComponent<RouteComponentProps> {
                     className="menu__button"
                     component={Link}
                     to={item.url}
-                    disabled={this.props.location.pathname === item.url}
+                    disabled={this.props.location.pathname.includes(item.url)}
                 >
                     {item.label}
                 </CustomButton>
