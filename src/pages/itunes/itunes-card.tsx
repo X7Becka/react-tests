@@ -4,7 +4,7 @@ import {CustomButton} from '../../components/buttons/custom-button'
 
 
 export const ItunesCard: React.FC<TProps> = React.memo((props) => {
-    const {card, className, addToCart, index} = props
+    const {card, className, addToCart, index, toggleDetails} = props
     const [isImgLoaded, setImgLoaded] = useState(false)
 
     return (
@@ -25,8 +25,11 @@ export const ItunesCard: React.FC<TProps> = React.memo((props) => {
                 </div>
                 <div className="itunes-card__btn-group">
                     <CustomButton onClick={() => addToCart(index)}
-                        className="itunes-card__btn itunes-card__btn--add"
-                    >ADD</CustomButton>
+                        className="itunes-card__btn itunes-card__btn--cart"
+                    >CART ITEM</CustomButton>
+                    <CustomButton onClick={() => toggleDetails({state: true, index})}
+                        className="itunes-card__btn itunes-card__btn--details"
+                    >DETAILS</CustomButton>
                 </div>
             </div>
         </div>
@@ -38,4 +41,5 @@ type TProps = {
     card: ItunesTItem
     index: number
     addToCart: (index: number) => void
+    toggleDetails: ({state, index}: {state: boolean, index: number}) => void
 }

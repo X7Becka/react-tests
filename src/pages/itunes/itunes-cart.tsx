@@ -24,13 +24,16 @@ export const ItunesCart: React.FC<TProps> = React.memo(props => {
                 <div className="itunes-cart__price">
                     {item.collectionPrice && item.collectionPrice > 0 ? `${item.collectionPrice} $` : 'FREE'}
                 </div>
-                <CustomButton onClick={() => _productRemove(index)} className="itunes-cart__remove">REMOVE</CustomButton>
+                <CustomButton className="itunes-cart__btn itunes-cart__btn--remove"
+                    onClick={() => _removeProduct({index})}
+                >
+                    REMOVE
+                </CustomButton>
             </div>
         )
     }
 
     const _cartList = () => {
-        console.log('RENDER CART LIST')
         return (
             <div className="itunes-cart__list">
                 <Scrollbar>
@@ -40,25 +43,37 @@ export const ItunesCart: React.FC<TProps> = React.memo(props => {
         )
     }
 
-    function _productRemove (index: number): void {
-        const productToRemove = cart[index]
+    function _removeProduct ({index, clearCart}: {index?: number, clearCart?: boolean}): void {
+        const productToRemove = cart[index || 0]
         const nextCart = cart.filter(item => item !== productToRemove)
-        localStorage.setItem('cart', JSON.stringify(nextCart))
+
+        localStorage.setItem('cart', JSON.stringify(clearCart ? [] : nextCart))
         setShouldUpdate(true)
     }
 
-    function getTotalPrice() {
+    function _footer() {
         const total = cart.reduce((accum, currItem) => accum + currItem.collectionPrice, 0)
+
         return (
-            <div className="itunes-cart__total">
-                TOTAL PRICE: {Number(total.toFixed(2))} $
+            <div className="itunes-cart__footer">
+                <div className="itunes-cart__clear-cart">
+                    <CustomButton className="itunes-cart__btn itunes-cart__btn--clear-cart"
+                        onClick={() => _removeProduct({clearCart: true})}
+                    >
+                        Clear
+                    </CustomButton>
+                </div>
+                <div className="itunes-cart__total">
+                    TOTAL PRICE: {Number(total.toFixed(2))} $
+                </div>
             </div>
+
         )
     }
     return (
         <div className={`itunes-cart ${className}`}>
             {_cartList()}
-            {getTotalPrice()}
+            {_footer()}
         </div>
     )
 })

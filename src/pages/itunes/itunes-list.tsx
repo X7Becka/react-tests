@@ -5,7 +5,7 @@ import Scrollbar from 'react-scrollbars-custom'
 import {TransitionGroup, CSSTransition} from 'react-transition-group'
 
 export const ItunesList: React.FC<TProps> = React.memo((props) => {
-    const {productList, className} = props
+    const {productList, className, toggleDetails} = props
 
     function addToCart(index: number): void {
         const currentCard = JSON.parse(localStorage.getItem('cart') || '[]')
@@ -17,6 +17,7 @@ export const ItunesList: React.FC<TProps> = React.memo((props) => {
         return productList?.map((card, i) => {
             return (
                 <ItunesCard
+                    toggleDetails={toggleDetails}
                     key={i}
                     index={i}
                     className="itunes-list__card"
@@ -38,4 +39,5 @@ export const ItunesList: React.FC<TProps> = React.memo((props) => {
 type TProps = {
     className: string
     productList?: ItunesTItem[]
+    toggleDetails: ({state, index}: {state: boolean, index: number}) => void
 }

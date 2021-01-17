@@ -2,42 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e91b5e8-2f5b-436f-b811-6dac0a0b806f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/img/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/itunes/itunes-card.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/itunes/itunes-cart.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/itunes/itunes-header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/itunes/itunes-list.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/itunes/itunes.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/actions/itunes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/containers/itunes/with-itunes.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/itunes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/sagas/itunes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/types/itunes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-card.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-cart.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-header.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/pages/itunes/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/data-display/video.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/itunes/itunes-details.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/components/data-display/blocks/video.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/components/data-display/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-details.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.stylelintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.stylelintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/svg/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/svg/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/buttons/custom-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buttons/custom-button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/data-input/custom-input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/data-input/custom-input.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/main-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/main-layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/root-action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/root-action.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/root-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/root-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/root-saga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/root-saga.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/sagas/github-repos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/sagas/github-repos.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/utils/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/utils/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/buttons/blocks/custom-button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/buttons/blocks/custom-button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/common/blocks/menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/common/blocks/menu.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/pages/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/itunes/itunes-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/itunes/itunes-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/itunes/itunes-cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/itunes/itunes-cart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/itunes/itunes-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/itunes/itunes-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/itunes/itunes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/itunes/itunes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/types/itunes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/types/itunes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-card.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-cart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-cart.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/pages/itunes/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/itunes/index.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +184,9 @@
       <workItem from="1610541668896" duration="16575000" />
       <workItem from="1610602624920" duration="26358000" />
       <workItem from="1610659964448" duration="3097000" />
-      <workItem from="1610732625262" duration="14673000" />
+      <workItem from="1610732625262" duration="14908000" />
+      <workItem from="1610816261547" duration="12355000" />
+      <workItem from="1610908480745" duration="12125000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1608320112776</created>
@@ -276,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610311507218</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="itunes task">
+      <created>1610748051605</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1610748051605</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,7 +293,8 @@
     <MESSAGE value="data" />
     <MESSAGE value="some styles" />
     <MESSAGE value="little bit pagination" />
-    <option name="LAST_COMMIT_MESSAGE" value="little bit pagination" />
+    <MESSAGE value="itunes task" />
+    <option name="LAST_COMMIT_MESSAGE" value="itunes task" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

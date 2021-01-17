@@ -43,7 +43,7 @@ export type ItunesTItem = {
     'discNumber': number,
     'isStreamable': boolean
     'kind'?: 'song' | 'feature-movie',
-    'previewUrl': string
+    'previewUrl'?: string
     'primaryGenreName': string,
     'releaseDate': string,
     'trackCensoredName': string,

@@ -1,0 +1,56 @@
+.itunes-details {
+  width: 100%;
+  position: relative;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  margin-top: 8px;
+
+  &__trailer-wrapper {
+    height: 100%;
+  }
+
+  &__trailer {
+    opacity: 0.5;
+    height: 100%;
+  }
+
+  &__info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(var(--main-background), 1) 2px, rgba(0, 0, 0, 0.3) 2px);
+    background-size: 3px;
+    background-repeat: repeat;
+    opacity: 1;
+    visibility: visible;
+    @include transition(opacity visibility);
+
+    &--hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__btn {
+    opacity: 1;
+    visibility: visible;
+    @include transition(opacity visibility);
+
+    &--trailer {
+      &.custom-button {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        z-index: 1;
+      }
+    }
+
+    &--hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+  }
+}

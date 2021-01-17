@@ -5,6 +5,7 @@
 
   &__list {
     height: 100%;
+    padding: 8px 0;
 
     .ScrollbarsCustom-Content {
       display: flex;
@@ -22,12 +23,14 @@
   }
 
   &__image {
-    width: 24px;
-    height: 24px;
+    width: auto;
+    height: 100%;
   }
 
   &__thumbnail {
     margin-right: 24px;
+    margin-left: 8px;
+    height: 24px;
   }
 
   &__name {
@@ -40,7 +43,16 @@
     flex-grow: 1;
   }
 
-  &__remove {
+  &__btn {
+
+  }
+
+  &__footer {
+    display: flex;
+  }
+
+  &__clear-cart {
+    margin: auto 0;
   }
 
   &__total {

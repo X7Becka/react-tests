@@ -1,17 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {ItunesEnhancedTProps} from '../../redux/containers/itunes/with-itunes'
 import {ItunesList} from './itunes-list'
 import {Route} from 'react-router-dom'
 import {CSSTransition, TransitionGroup} from 'react-transition-group'
 import {ItunesHeader} from './itunes-header'
 import {ItunesCart} from './itunes-cart'
+import {ItunesDetails} from './itunes-details'
+import {ItunesTItem} from '../../redux/types/itunes'
 
 
 export const Itunes: React.FC<ItunesEnhancedTProps> = React.memo((props) => {
     const {itunes, location, searchProducts} = props
+    const [isDetailsOpened, toggleIsDetailsOpened] = useState(false)
+    const [details, setDetails] = useState<ItunesTItem | undefined>(undefined)
 
     const routes = [
-        {path: '/itunes', Component: <ItunesList className="itunes__list" productList={itunes.products?.results} />},
+        {path: '/itunes', Component: <ItunesList toggleDetails={toggleDetails} className="itunes__list" productList={itunes.products?.results} />},
         {path: '/itunes/cart', Component: <ItunesCart className="itunes__cart"/>}
     ]
 
@@ -31,11 +35,28 @@ export const Itunes: React.FC<ItunesEnhancedTProps> = React.memo((props) => {
         ))
     }
 
+    function toggleDetails({state, index}: {state: boolean, index?: number}): void {
+        toggleIsDetailsOpened(state)
+
+        if (index !== undefined) setDetails(itunes.products?.results[index])
+    }
+
     return (
         <div className="itunes">
             <ItunesHeader className="itunes__header" searchProducts={searchProducts} />
             <div className="itunes__view-container">
-                {_view()}
+                <CSSTransition in={!isDetailsOpened} timeout={300} classNames="itunes__animation-details-"
+                    unmountOnExit
+                >
+                    <div className="itunes__animation-details">{_view()}</div>
+                </CSSTransition>
+                <CSSTransition in={isDetailsOpened && !!details} timeout={300} classNames="itunes__animation-details-"
+                    unmountOnExit
+                >
+                    <div className="itunes__animation-details">
+                        <ItunesDetails className="itunes__details" product={details} toggleDetails={toggleDetails}/>
+                    </div>
+                </CSSTransition>
             </div>
         </div>
     )
