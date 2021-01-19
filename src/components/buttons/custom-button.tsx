@@ -4,18 +4,21 @@ import Button from '@material-ui/core/Button'
 export const CustomButton: React.FC<TProps> = React.memo(props =>  {
     const {children, className, to, component, disabled, onClick} = props
     const componentProps: TProps = {
-        className: `${className} custom-button custom-button__wrapper`,
         component,
         to,
         disabled,
         onClick,
-        type: 'reset'
+        type: 'reset',
+        className: 'spec'
     }
 
+
     return (
-        <Button {...componentProps}>
-            {children}
-        </Button>
+        <div className={`${className} spec custom-button`}>
+            <Button {...componentProps}>
+                {children}
+            </Button>
+        </div>
     )
 })
 

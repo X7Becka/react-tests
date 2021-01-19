@@ -15,16 +15,24 @@ export const Itunes: React.FC<ItunesEnhancedTProps> = React.memo((props) => {
     const [details, setDetails] = useState<ItunesTItem | undefined>(undefined)
 
     const routes = [
-        {path: '/itunes', Component: <ItunesList toggleDetails={toggleDetails} className="itunes__list" productList={itunes.products?.results} />},
+        {path: '/itunes', Component: <ItunesList toggleDetails={toggleDetails}
+                                                 className="itunes__list"
+                                                 productList={itunes.products?.results}
+        />},
         {path: '/itunes/cart', Component: <ItunesCart className="itunes__cart"/>}
     ]
 
     const _view = () => {
         return routes.map(({path, Component}) => (
-            <Route key={path} exact path={path}>
+            <Route key={path}
+                   exact
+                   path={path}
+            >
                 {({match}) => (
-                    <CSSTransition in={match !== null} timeout={300} classNames="itunes__animation-"
-                        unmountOnExit
+                    <CSSTransition in={match !== null}
+                                   timeout={300}
+                                   classNames="itunes__animation-"
+                                   unmountOnExit
                     >
                         <div className="itunes__animation">
                             {Component}
@@ -40,21 +48,31 @@ export const Itunes: React.FC<ItunesEnhancedTProps> = React.memo((props) => {
 
         if (index !== undefined) setDetails(itunes.products?.results[index])
     }
-
+    console.log(process.env.NODE_ENV, 'isTrailer')
+    console.log(process.env.PUBLIC_URL, 'isTrailer')
     return (
         <div className="itunes">
-            <ItunesHeader className="itunes__header" searchProducts={searchProducts} />
+            <ItunesHeader className="itunes__header"
+                          searchProducts={searchProducts}
+            />
             <div className="itunes__view-container">
-                <CSSTransition in={!isDetailsOpened} timeout={300} classNames="itunes__animation-details-"
-                    unmountOnExit
+                <CSSTransition in={!isDetailsOpened}
+                               timeout={300}
+                               classNames="itunes__animation-details-"
+                               unmountOnExit
                 >
                     <div className="itunes__animation-details">{_view()}</div>
                 </CSSTransition>
-                <CSSTransition in={isDetailsOpened && !!details} timeout={300} classNames="itunes__animation-details-"
-                    unmountOnExit
+                <CSSTransition in={isDetailsOpened && !!details}
+                               timeout={300}
+                               classNames="itunes__animation-details-"
+                               unmountOnExit
                 >
                     <div className="itunes__animation-details">
-                        <ItunesDetails className="itunes__details" product={details} toggleDetails={toggleDetails}/>
+                        <ItunesDetails className="itunes__details"
+                                       product={details}
+                                       toggleDetails={toggleDetails}
+                        />
                     </div>
                 </CSSTransition>
             </div>

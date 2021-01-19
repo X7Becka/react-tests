@@ -24,40 +24,47 @@ export type ItunesActions =
 
 
 export type ItunesTItem = {
-    'artistId': number,
-    'artistName': string,
-    'artistViewUrl': string
-    'artworkUrl100': string
-    'artworkUrl30': string
-    'artworkUrl60': string
-    'collectionCensoredName': string,
-    'collectionExplicitness': 'explicit',
-    'collectionId': number,
-    'collectionName': string,
-    'collectionPrice': number,
-    'collectionViewUrl': string
-    'contentAdvisoryRating': 'Explicit',
-    'country': string,
-    'currency': 'USD',
-    'discCount': number,
-    'discNumber': number,
-    'isStreamable': boolean
-    'kind'?: 'song' | 'feature-movie',
-    'previewUrl'?: string
-    'primaryGenreName': string,
-    'releaseDate': string,
-    'trackCensoredName': string,
-    'trackCount': number,
-    'trackExplicitness': 'explicit',
-    'trackId': number,
-    'trackName': string,
-    'trackNumber': number,
-    'trackPrice': number,
-    'trackTimeMillis': number,
-    'trackViewUrl': string
-    'wrapperType': 'track' | 'audiobook',
-    'copyright'?: string,
-    'description': string
+    artistId: number
+    artistName: string
+    artistViewUrl: string
+    artworkUrl600: string
+    artworkUrl500: string
+    artworkUrl400: string
+    artworkUrl300: string
+    artworkUrl200: string
+    artworkUrl100: string
+    artworkUrl30: string
+    artworkUrl60: string
+    collectionCensoredName: string
+    collectionExplicitness: string
+    collectionId: number
+    collectionName: string
+    collectionPrice: number
+    collectionViewUrl: string
+    contentAdvisoryRating: string
+    country: string
+    currency: 'USD'
+    discCount: number
+    discNumber: number
+    isStreamable: boolean
+    kind: 'song' | 'feature-movie'
+    previewUrl?: string
+    primaryGenreName: string
+    genres: string[]
+    releaseDate: string
+    trackCensoredName: string
+    trackCount: number
+    trackExplicitness: string
+    trackId: number
+    trackName: string
+    trackNumber: number
+    trackPrice: number
+    trackTimeMillis: number
+    trackViewUrl: string
+    wrapperType: 'track' | 'audiobook'
+    copyright?: string
+    description: string
+    longDescription: string
 }
 
 export type GithubReposTPagination<URL = string, NUM = number> = {

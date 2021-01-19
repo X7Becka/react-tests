@@ -7,11 +7,10 @@
       "esnext",
       "ES6"
     ],
-    //MATERIAL UI
+    "baseUrl": "src",
     "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
-    //
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -24,7 +23,8 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "resolveJsonModule": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "suppressImplicitAnyIndexErrors": true
   },
   "include": [
     "src",

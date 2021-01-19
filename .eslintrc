@@ -44,7 +44,6 @@
     "no-console": "warn",
     "object-curly-spacing": "warn",
     "object-shorthand": "warn",
-    "indent": "warn",
     "react/jsx-first-prop-new-line": "off",
 //    "react/jsx-prop-new-line": "warn", //BUGGY. Definition for rule 'react/jsx-prop-new-line' was not found
     "react/jsx-max-props-per-line": ["warn", {"maximum": 1}],
@@ -52,6 +51,7 @@
     "react/jsx-uses-react": "warn",
     "react/prop-types": "off",
     "react/display-name": "off",
+    "react/jsx-indent-props": ["warn", "first"],
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-this-alias": "off",

@@ -8,9 +8,10 @@
   &__button {
 
     &--cart {
-      &.custom-button {
         margin-left: auto;
         border-radius: 48px;
+
+      .MuiButtonBase-root {
         padding-right: 24px;
         padding-left: 24px;
       }

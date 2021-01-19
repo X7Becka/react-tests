@@ -14,9 +14,14 @@ export const ItunesCart: React.FC<TProps> = React.memo(props => {
 
     const _product = (item: types.ItunesTItem, index: number) => {
         return (
-            <div key={index} className="itunes-cart__product">
+            <div key={index}
+                 className="itunes-cart__product"
+            >
                 <div className="itunes-cart__thumbnail">
-                    <img src={item.artworkUrl100} alt={item.collectionName} className="itunes-cart__image"/>
+                    <img src={item.artworkUrl100}
+                         alt={item.collectionName}
+                         className="itunes-cart__image"
+                    />
                 </div>
                 <div className="itunes-cart__name">
                     {item.collectionName || item.trackCensoredName}
@@ -25,7 +30,7 @@ export const ItunesCart: React.FC<TProps> = React.memo(props => {
                     {item.collectionPrice && item.collectionPrice > 0 ? `${item.collectionPrice} $` : 'FREE'}
                 </div>
                 <CustomButton className="itunes-cart__btn itunes-cart__btn--remove"
-                    onClick={() => _removeProduct({index})}
+                              onClick={() => _removeProduct({index})}
                 >
                     REMOVE
                 </CustomButton>
@@ -43,7 +48,7 @@ export const ItunesCart: React.FC<TProps> = React.memo(props => {
         )
     }
 
-    function _removeProduct ({index, clearCart}: {index?: number, clearCart?: boolean}): void {
+    function _removeProduct({index, clearCart}: { index?: number, clearCart?: boolean }): void {
         const productToRemove = cart[index || 0]
         const nextCart = cart.filter(item => item !== productToRemove)
 
@@ -58,7 +63,7 @@ export const ItunesCart: React.FC<TProps> = React.memo(props => {
             <div className="itunes-cart__footer">
                 <div className="itunes-cart__clear-cart">
                     <CustomButton className="itunes-cart__btn itunes-cart__btn--clear-cart"
-                        onClick={() => _removeProduct({clearCart: true})}
+                                  onClick={() => _removeProduct({clearCart: true})}
                     >
                         Clear
                     </CustomButton>
@@ -70,6 +75,7 @@ export const ItunesCart: React.FC<TProps> = React.memo(props => {
 
         )
     }
+
     return (
         <div className={`itunes-cart ${className}`}>
             {_cartList()}
