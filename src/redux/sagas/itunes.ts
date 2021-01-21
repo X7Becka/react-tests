@@ -16,6 +16,7 @@ function* callGetProducts({payload}: types.FetchProductsTAction) {
         const response = yield call(getProductsApi, payload.productName, payload.page)
         yield put(storeProductsAction(response.data))
         yield put(reqStatusAction('complete'))
+        yield 'complete'
     } catch(error) {
         console.log(error, 'error')
         yield put(reqStatusAction('error'))

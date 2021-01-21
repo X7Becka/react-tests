@@ -5,16 +5,14 @@ import {CustomButton} from '../../components/buttons/custom-button'
 
 export const ItunesCard: React.FC<TProps> = React.memo((props) => {
     const {card, className, addToCart, index, toggleDetails} = props
-    const [isImgLoaded, setImgLoaded] = useState(false)
-
+    console.log('RENDER')
     return (
         <div className={`itunes-card ${className}`}>
             <div className="itunes-card__wrapper">
                 <div className="itunes-card__thumbnail">
-                    <img className={`itunes-card__image ${!isImgLoaded && 'itunes-card__image--hidden'}`}
-                        src={card.artworkUrl100}
-                        alt={card.artistName}
-                        onLoad={() => setImgLoaded(true)}
+                    <img className="itunes-card__image"
+                         src={card.artworkUrl100}
+                         alt={card.artistName}
                     />
                 </div>
                 <div className="itunes-card__name">
@@ -25,10 +23,10 @@ export const ItunesCard: React.FC<TProps> = React.memo((props) => {
                 </div>
                 <div className="itunes-card__btn-group">
                     <CustomButton onClick={() => addToCart(index)}
-                        className="itunes-card__btn itunes-card__btn--cart"
+                                  className="itunes-card__btn itunes-card__btn--cart"
                     >CART ITEM</CustomButton>
                     <CustomButton onClick={() => toggleDetails({state: true, index})}
-                        className="itunes-card__btn itunes-card__btn--details"
+                                  className="itunes-card__btn itunes-card__btn--details"
                     >DETAILS</CustomButton>
                 </div>
             </div>

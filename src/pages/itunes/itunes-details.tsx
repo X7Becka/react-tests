@@ -85,14 +85,12 @@ export const ItunesDetails: React.FC<TProps> = React.memo(props => {
     const _details = () => {
         const detailsList = Object.keys(detailsData[product.kind ?? product.wrapperType]).map((item, i) => {
             return (
-                <>
-                    <li key={i}
-                        className="itunes-details__list-item"
-                    >
-                        <span>{item}</span>
-                        <span>{detailsData[product.kind ?? product.wrapperType][item]}</span>
-                    </li>
-                </>
+                <li key={i}
+                    className="itunes-details__list-item"
+                >
+                    <span>{item}</span>
+                    <span>{detailsData[product.kind ?? product.wrapperType][item]}</span>
+                </li>
             )
         })
         return (
@@ -132,6 +130,7 @@ export const ItunesDetails: React.FC<TProps> = React.memo(props => {
                 </CustomButton>
                 <CustomButton className="itunes-details__btn"
                               onClick={() => _toggleWatch()}
+                              disabled={!product.previewUrl}
                 >
                     PREVIEW
                 </CustomButton>

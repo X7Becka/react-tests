@@ -4,8 +4,6 @@ import ReactDOM from 'react-dom'
 import './index.scss'
 import '.'
 
-import MaterialTheme from './assets/theme/material-theme.ts'
-
 import {MainLayout} from './layouts/main-layout'
 
 import {Provider} from 'react-redux'
@@ -14,7 +12,7 @@ import {RequestLoaderContainer} from './redux/containers/common/request-loader'
 import {ThemeProvider} from '@material-ui/core/styles'
 import {Router} from 'react-router-dom'
 import * as createHistory from 'history'
-import MUI_THEME from './assets/theme/material-theme.ts'
+import MUI_THEME from './assets/theme/material-theme'
 // import reportWebVitals from './report-web-vitals'
 
 

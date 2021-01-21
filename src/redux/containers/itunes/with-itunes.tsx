@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import {connect, ConnectedProps} from 'react-redux'
 import * as actions from '../../actions/itunes'
 import * as types from '../../types/itunes'
@@ -36,20 +36,15 @@ type TProps = ConnectedProps<typeof connector> & RouteComponentProps
 
 export function withItunes<T> (EnhancedComponent: React.ComponentType<T & TProps>) {
 
+
     function ComponentContainer(props: TProps) {
-        const isFetchingProducts = false
         const {itunes, reqStatus, fetchProducts, location} = props
         const enhancedProps = {
             itunes,
             reqStatus,
-            isFetchingProducts,
             searchProducts,
             location
         } as unknown as T & TProps
-
-        // useEffect(() => {
-        //
-        // }, [])
 
         function searchProducts<T extends types.FetchProductsTAction['payload']>(productName: T['productName']) {
             fetchProducts(productName, 1)

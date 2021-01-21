@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {ItunesEnhancedTProps} from '../../redux/containers/itunes/with-itunes'
 import {ItunesList} from './itunes-list'
 import {Route} from 'react-router-dom'
-import {CSSTransition, TransitionGroup} from 'react-transition-group'
+import {CSSTransition} from 'react-transition-group'
 import {ItunesHeader} from './itunes-header'
 import {ItunesCart} from './itunes-cart'
 import {ItunesDetails} from './itunes-details'
@@ -10,16 +10,18 @@ import {ItunesTItem} from '../../redux/types/itunes'
 
 
 export const Itunes: React.FC<ItunesEnhancedTProps> = React.memo((props) => {
-    const {itunes, location, searchProducts} = props
+    const {itunes, searchProducts, reqStatus} = props
     const [isDetailsOpened, toggleIsDetailsOpened] = useState(false)
     const [details, setDetails] = useState<ItunesTItem | undefined>(undefined)
-
+console.log('ITUNES RENDER')
     const routes = [
-        {path: '/itunes', Component: <ItunesList toggleDetails={toggleDetails}
-                                                 className="itunes__list"
-                                                 productList={itunes.products?.results}
-        />},
-        {path: '/itunes/cart', Component: <ItunesCart className="itunes__cart"/>}
+        {
+            path: '/itunes', Component: <ItunesList toggleDetails={toggleDetails}
+                                                    className="itunes__list"
+                                                    productList={itunes.products?.results}
+            />
+        },
+        {path: '/itunes/cart', Component: <ItunesCart className="itunes__cart" />}
     ]
 
     const _view = () => {
@@ -43,17 +45,17 @@ export const Itunes: React.FC<ItunesEnhancedTProps> = React.memo((props) => {
         ))
     }
 
-    function toggleDetails({state, index}: {state: boolean, index?: number}): void {
+    function toggleDetails({state, index}: { state: boolean, index?: number }): void {
         toggleIsDetailsOpened(state)
 
         if (index !== undefined) setDetails(itunes.products?.results[index])
     }
-    console.log(process.env.NODE_ENV, 'isTrailer')
-    console.log(process.env.PUBLIC_URL, 'isTrailer')
+
     return (
         <div className="itunes">
             <ItunesHeader className="itunes__header"
                           searchProducts={searchProducts}
+                          isFetching={reqStatus.state === 'loading'}
             />
             <div className="itunes__view-container">
                 <CSSTransition in={!isDetailsOpened}

@@ -6,7 +6,6 @@ import {TransitionGroup, CSSTransition} from 'react-transition-group'
 
 export const ItunesList: React.FC<TProps> = React.memo((props) => {
     const {productList, className, toggleDetails} = props
-
     function addToCart(index: number): void {
         const currentCard = JSON.parse(localStorage.getItem('cart') || '[]')
         if (productList) localStorage.setItem('cart', JSON.stringify(currentCard.concat(productList[index])))
@@ -15,6 +14,7 @@ export const ItunesList: React.FC<TProps> = React.memo((props) => {
 
     const _renderList = () => {
         return productList?.map((card, i) => {
+
             return (
                 <ItunesCard
                     toggleDetails={toggleDetails}

@@ -37,5 +37,5 @@ export function fetchOrganizationRepositoriesApi(organization: string, page: num
 }
 
 export function getProductsApi(productName: string, page: number): Promise<void | AxiosResponse<any>> {
-    return axios.get(`${itunesAPI}?term=${productName}`)
+    return axios.get(`${itunesAPI}?limit=200&term=${productName}`)
 }

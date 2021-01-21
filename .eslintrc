@@ -41,6 +41,7 @@
     "semi": ["warn","never"],
     "quotes": ["warn", "single"],
     "semi-spacing": "warn",
+    "no-var": "off",
     "no-console": "warn",
     "object-curly-spacing": "warn",
     "object-shorthand": "warn",
