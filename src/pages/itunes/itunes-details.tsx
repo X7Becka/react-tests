@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
-import {ItunesTItem} from '../../redux/types/itunes'
-import {Video} from '../../components/data-display/video'
-import {CustomButton} from '../../components/buttons/custom-button'
-import {CloseSvg} from '../../assets/svg'
+import {ItunesTItem} from 'redux/types/itunes'
+import {Video} from 'components/data-display/video'
+import {CustomButton} from 'components/buttons/custom-button'
+import {CloseSvg} from 'assets/svg'
 
 export const ItunesDetails: React.FC<TProps> = React.memo(props => {
     const {className, product, toggleDetails} = props
@@ -109,9 +109,11 @@ export const ItunesDetails: React.FC<TProps> = React.memo(props => {
                              alt="label"
                         />
                     </div>
-                    <span className="itunes-details__title">
-                    {detailsDataTitle[product.kind ?? product.wrapperType]}
-                </span>
+                    <span className="itunes-details__title"
+                          title={detailsDataTitle[product.kind ?? product.wrapperType]}
+                    >
+                        {detailsDataTitle[product.kind ?? product.wrapperType]}
+                    </span>
                 </div>
                 <div className="itunes-details__details-list">
                     {detailsList}

@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import {ItunesEnhancedTProps} from '../../redux/containers/itunes/with-itunes'
 import {ItunesList} from './itunes-list'
-import {Route} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import {CSSTransition} from 'react-transition-group'
 import {ItunesHeader} from './itunes-header'
 import {ItunesCart} from './itunes-cart'
@@ -13,20 +13,22 @@ export const Itunes: React.FC<ItunesEnhancedTProps> = React.memo((props) => {
     const {itunes, searchProducts, reqStatus} = props
     const [isDetailsOpened, toggleIsDetailsOpened] = useState(false)
     const [details, setDetails] = useState<ItunesTItem | undefined>(undefined)
-console.log('ITUNES RENDER')
+
+    useEffect(() => {
+        return () => {
+            if (itunes.products === null) toggleIsDetailsOpened(false)
+        }
+    }, [itunes.products])
+
     const routes = [
-        {
-            path: '/itunes', Component: <ItunesList toggleDetails={toggleDetails}
-                                                    className="itunes__list"
-                                                    productList={itunes.products?.results}
-            />
-        },
+        {path: '/itunes', Component: <ItunesList toggleDetails={toggleDetails} className="itunes__list" productList={itunes.products?.results} />},
         {path: '/itunes/cart', Component: <ItunesCart className="itunes__cart" />}
     ]
 
     const _view = () => {
+        console.log('VIEW')
         return routes.map(({path, Component}) => (
-            <Route key={path}
+            <Route  key={path}
                    exact
                    path={path}
             >
@@ -47,7 +49,6 @@ console.log('ITUNES RENDER')
 
     function toggleDetails({state, index}: { state: boolean, index?: number }): void {
         toggleIsDetailsOpened(state)
-
         if (index !== undefined) setDetails(itunes.products?.results[index])
     }
 
@@ -55,7 +56,7 @@ console.log('ITUNES RENDER')
         <div className="itunes">
             <ItunesHeader className="itunes__header"
                           searchProducts={searchProducts}
-                          isFetching={reqStatus.state === 'loading'}
+                          reqStatus={reqStatus}
             />
             <div className="itunes__view-container">
                 <CSSTransition in={!isDetailsOpened}

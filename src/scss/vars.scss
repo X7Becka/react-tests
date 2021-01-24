@@ -1,3 +1,6 @@
+$breakpoints: (xxl: 1272px, xl: 960px, lg: 640px, sm: 425px, xs:320px);
+@import "~include-media/dist/_include-media.scss";
+
 :root {
   --main-background: 41, 42, 45;
   --main: 171, 200, 0;

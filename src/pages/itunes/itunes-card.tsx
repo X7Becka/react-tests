@@ -5,7 +5,7 @@ import {CustomButton} from '../../components/buttons/custom-button'
 
 export const ItunesCard: React.FC<TProps> = React.memo((props) => {
     const {card, className, addToCart, index, toggleDetails} = props
-    console.log('RENDER')
+
     return (
         <div className={`itunes-card ${className}`}>
             <div className="itunes-card__wrapper">

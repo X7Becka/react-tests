@@ -2,4 +2,45 @@
   display: flex;
   flex-grow: 1;
   padding: 8px 0;
+
+  &__btn-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  &__btn {
+    /*
+  100% - 2-cards width - right and left paddings
+   */
+    width: calc(100% - 100% / 5 * 2 - 8px * 2);
+    position: relative;
+
+    @include media("<=xxl") {
+      width: calc(100% - 100% / 4 * 2 - 8px * 2);
+    }
+
+    @include media("<=xl") {
+      width: calc(100% - 100% / 3 * 2 - 8px * 2);
+    }
+
+    @include media("<=lg") {
+      width: calc(100% - 8px * 2)
+    }
+
+
+  }
+
+  &__btn-description {
+    font-size: 8px;
+    position: absolute;
+    right: 6px;
+    top: 4px;
+
+    @include media("<=xl") {
+      right: 2px;
+      top: 0;
+    }
+  }
 }

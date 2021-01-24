@@ -1,5 +1,5 @@
 import AXIOS, {AxiosResponse} from 'axios'
-import {GithubReposTItem} from '../types/github-repos'
+import {GithubReposTItem} from 'redux/types/github-repos'
 
 const gitAPI = 'https://api.github.com'
 const itunesAPI = 'https://itunes.apple.com/search'

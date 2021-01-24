@@ -61,5 +61,5 @@ const mapStateToProps = (store: RootState) => {
     }
 }
 
-export const withGithubRepos = connect(mapStateToProps, mapDispatchToProps)(GithubReposContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(GithubReposContainer)
 

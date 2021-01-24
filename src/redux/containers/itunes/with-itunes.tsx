@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import {connect, ConnectedProps} from 'react-redux'
 import * as actions from '../../actions/itunes'
 import * as types from '../../types/itunes'
@@ -9,6 +9,7 @@ import {ReqStatusState} from '../../reducers/req-status'
 import {ReqStatusActions} from '../../types/req-status'
 import {ItunesActions} from '../../types/itunes'
 import {ItunesState} from '../../reducers/itunes'
+import {Itunes} from '../../../pages/itunes/itunes'
 
 export type ItunesEnhancedTProps = {
     reqStatus: ReqStatusState
@@ -34,7 +35,7 @@ const connector = connect(mapStateToProps, mapDispatchToProps)
 
 type TProps = ConnectedProps<typeof connector> & RouteComponentProps
 
-export function withItunes<T> (EnhancedComponent: React.ComponentType<T & TProps>) {
+function withItunes<T> (EnhancedComponent: React.ComponentType<T & TProps>) {
 
 
     function ComponentContainer(props: TProps) {
@@ -54,3 +55,5 @@ export function withItunes<T> (EnhancedComponent: React.ComponentType<T & TProps
     }
     return connector(ComponentContainer) as unknown as React.ComponentType<T>
 }
+
+export default withItunes(React.memo(Itunes))

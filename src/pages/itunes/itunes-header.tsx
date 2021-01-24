@@ -4,12 +4,13 @@ import {CustomInput} from '../../components/data-input/custom-input'
 import {CustomButton} from '../../components/buttons/custom-button'
 import {ArrowSvg, ShoppingCartSvg} from '../../assets/svg'
 import * as types from '../../redux/types/itunes'
+import {ReqStatusState} from '../../redux/reducers/req-status'
 
 
 export const ItunesHeader: React.FC<TProps> = React.memo((props) => {
-    const {isFetching} = props
+    const {reqStatus} = props
     const searchQuery = React.useRef() as MutableRefObject<HTMLInputElement>
-console.log(isFetching, 'isFetching')
+
     const _main = () => {
         return (
             <div className="itunes-header__header">
@@ -19,11 +20,11 @@ console.log(isFetching, 'isFetching')
                     <CustomInput className="itunes-header__search-input"
                                  onEnter={() => searchProducts(searchQuery.current.value, 1)}
                                  inputRef={searchQuery}
-                                 disabled={isFetching}
+                                 isLoading={reqStatus.state === 'loading'}
                     />
                     <CustomButton className="itunes-header__button itunes-header__button--search"
                                   onClick={() => searchProducts(searchQuery.current.value, 1)}
-                                  disabled={isFetching}
+                                  disabled={reqStatus.state === 'loading'}
                     >
                         search
                     </CustomButton>
@@ -79,5 +80,5 @@ console.log(isFetching, 'isFetching')
 type TProps = {
     className: string
     searchProducts: <T extends types.FetchProductsTAction['payload']> (productName: T['productName'], page: T['page']) => void
-    isFetching: boolean
+    reqStatus: ReqStatusState
 }
