@@ -1,15 +1,29 @@
 .itunes-header {
+
+  &__header {
+    padding: 0 8px;
+  }
+
   &__control-wrapper {
     display: flex;
     align-items: center;
     width: 100%;
+
+    @include media("<=lg") {
+      flex-wrap: wrap;
+    }
   }
 
   &__button {
 
     &--cart {
-        margin-left: auto;
-        border-radius: 48px;
+      margin-left: auto;
+      border-radius: 48px;
+
+      @include media("<=lg") {
+        width: 100%;
+        margin-top: 12px;
+      }
 
       .MuiButtonBase-root {
         padding-right: 24px;
@@ -19,7 +33,11 @@
   }
 
   &__search-input {
-    margin-right: 8px;
+    margin-right: 8px !important;
+
+    @include media("<=lg") {
+      flex-grow: 1;
+    }
   }
 
   &__icon {

@@ -26,9 +26,8 @@ export const Itunes: React.FC<ItunesEnhancedTProps> = React.memo((props) => {
     ]
 
     const _view = () => {
-        console.log('VIEW')
         return routes.map(({path, Component}) => (
-            <Route  key={path}
+            <Route key={path}
                    exact
                    path={path}
             >

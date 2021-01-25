@@ -7,7 +7,7 @@ export class CustomInput extends React.PureComponent <TProps> {
     render(): JSX.Element {
         const {className, onInput, isLoading, label, value, inputRef, onEnter, disabled} = this.props
         const props: TProps = {
-            className: `${className} ${isLoading && 'custom-input__loading'}`,
+            className: `${isLoading && 'custom-input__loading'}`,
             variant: 'standard',
             onInput,
             value,
@@ -16,12 +16,12 @@ export class CustomInput extends React.PureComponent <TProps> {
         }
 
         const _onEnter = (e: React.KeyboardEvent<HTMLTextAreaElement | HTMLInputElement>): void => {
-            if (onEnter && e.key === 'Enter' && !disabled) {
+            if (onEnter && e.key === 'Enter' && !disabled && !isLoading) {
                 onEnter()
             }
         }
         return (
-            <FormControl classes={{root: 'custom-input'}}>
+            <FormControl className={className} classes={{root: 'custom-input'}}>
                 <InputLabel classes={{root: 'custom-input__label'}}>{label}</InputLabel>
                 <Input onKeyDown={_onEnter}
                        classes={{root: 'custom-input__input', focused: 'custom-input__input--focused'}}

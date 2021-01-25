@@ -6,24 +6,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/svg/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/svg/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/main-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/main-layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/itunes/itunes-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/itunes/itunes-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/itunes/itunes-details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/itunes/itunes-details.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/itunes/itunes-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/itunes/itunes-header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/itunes/itunes-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/itunes/itunes-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/data-input/custom-input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/data-input/custom-input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/itunes/itunes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/itunes/itunes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/math/math.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/math/math.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/containers/github-repos/with-github-repos.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/containers/github-repos/with-github-repos.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/containers/itunes/with-itunes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/containers/itunes/with-itunes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/utils/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/utils/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/data-input/blocks/custom-input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/data-input/blocks/custom-input.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/layouts/blocks/main-layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/layouts/blocks/main-layout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/common/blocks/menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/common/blocks/menu.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-card.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-cart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-cart.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-details.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-details.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/vars.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +190,8 @@
       <workItem from="1611341831016" duration="40000" />
       <workItem from="1611341924901" duration="852000" />
       <workItem from="1611488463657" duration="15981000" />
-      <workItem from="1611512896944" duration="10865000" />
+      <workItem from="1611512896944" duration="11436000" />
+      <workItem from="1611555840271" duration="10101000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1608320112776</created>
@@ -306,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611267188987</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="itunes breakpoints">
+      <created>1611524380428</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1611524380428</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,7 +329,8 @@
     <MESSAGE value="itunes task" />
     <MESSAGE value="itunes trailer" />
     <MESSAGE value="itunes preview" />
-    <option name="LAST_COMMIT_MESSAGE" value="itunes preview" />
+    <MESSAGE value="itunes breakpoints" />
+    <option name="LAST_COMMIT_MESSAGE" value="itunes breakpoints" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -85,6 +85,8 @@
     &--cart, &--details {
       width: 50%;
     }
-
+  }
+  .MuiButton-label {
+    white-space: nowrap;
   }
 }

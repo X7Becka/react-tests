@@ -93,7 +93,6 @@ textarea {
 
   &-Track {
     background: rgba(var(--main), 0.1) !important;
-    width: 6px !important;
     border-radius: 10px !important;
     @include transition(width);
   }
@@ -101,6 +100,10 @@ textarea {
   &-Thumb {
     background: rgba(var(--main), 0.6) !important;
     border-radius: 10px !important;
+  }
+
+  &-Scroller {
+    margin-right: -15px !important;
   }
 
   &-Wrapper {
