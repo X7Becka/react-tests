@@ -2,18 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e91b5e8-2f5b-436f-b811-6dac0a0b806f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/data-input/custom-input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/data-input/custom-input.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/itunes/itunes-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/itunes/itunes-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/itunes/itunes-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/itunes/itunes-header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/itunes/itunes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/itunes/itunes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/sagas/itunes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/sagas/itunes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/components/common/blocks/menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/common/blocks/menu.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/data-display/blocks/video.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/data-display/blocks/video.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/pages/github-repos/blocks/github-repos.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/github-repos/blocks/github-repos.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-card.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-cart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-cart.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes-list.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/pages/itunes/blocks/itunes.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -191,7 +192,8 @@
       <workItem from="1611341924901" duration="852000" />
       <workItem from="1611488463657" duration="15981000" />
       <workItem from="1611512896944" duration="11436000" />
-      <workItem from="1611555840271" duration="10101000" />
+      <workItem from="1611555840271" duration="10117000" />
+      <workItem from="1611664225574" duration="13336000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1608320112776</created>
@@ -305,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611524380428</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="itunes breakpoints">
+      <created>1611607600797</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1611607600797</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

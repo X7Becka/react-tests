@@ -1,5 +1,5 @@
 import {ItunesTItem} from '../../redux/types/itunes'
-import React, {useState} from 'react'
+import React from 'react'
 import {CustomButton} from '../../components/buttons/custom-button'
 
 

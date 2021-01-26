@@ -9,7 +9,6 @@
     justify-content: center;
   }
 
-
   &__btn {
     /*
   100% - 2-cards width - right and left paddings
@@ -28,8 +27,6 @@
     @include media("<=lg") {
       width: calc(100% - 8px * 2)
     }
-
-
   }
 
   &__btn-description {

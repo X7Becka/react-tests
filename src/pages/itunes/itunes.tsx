@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import {ItunesEnhancedTProps} from '../../redux/containers/itunes/with-itunes'
 import {ItunesList} from './itunes-list'
-import {Route, Switch} from 'react-router-dom'
+import {Route} from 'react-router-dom'
 import {CSSTransition} from 'react-transition-group'
 import {ItunesHeader} from './itunes-header'
 import {ItunesCart} from './itunes-cart'
@@ -61,7 +61,6 @@ export const Itunes: React.FC<ItunesEnhancedTProps> = React.memo((props) => {
                 <CSSTransition in={!isDetailsOpened}
                                timeout={300}
                                classNames="itunes__animation-details-"
-                               unmountOnExit
                 >
                     <div className="itunes__animation-details">{_view()}</div>
                 </CSSTransition>

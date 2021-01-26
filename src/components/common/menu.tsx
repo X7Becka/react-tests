@@ -51,7 +51,7 @@ class Menu extends React.PureComponent<RouteComponentProps> {
             <div className="menu">
                 <div className="menu__links-wrapper">
                     <Swiper {...this.SWIPER_PROPS}>
-                    {this.buttons}
+                        {this.buttons}
                     </Swiper>
                 </div>
             </div>
@@ -62,14 +62,14 @@ class Menu extends React.PureComponent<RouteComponentProps> {
         return this._urls.map((item, i) => {
             return (
                 <SwiperSlide key={i}>
-                <CustomButton
+                    <CustomButton
                               className="menu__button menu__swiper-slide"
                               component={Link}
                               to={item.url}
                               disabled={this.props.location.pathname.includes(item.url)}
-                >
-                    {item.label}
-                </CustomButton>
+                    >
+                        {item.label}
+                    </CustomButton>
                 </SwiperSlide>
             )
         })

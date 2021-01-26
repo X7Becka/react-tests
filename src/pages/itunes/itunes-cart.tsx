@@ -3,7 +3,6 @@ import * as types from './../../redux/types/itunes'
 import {CustomButton} from '../../components/buttons/custom-button'
 import Scrollbar from 'react-scrollbars-custom'
 
-
 export const ItunesCart: React.FC<TProps> = React.memo(props => {
     const {className} = props
     const cart: types.ItunesTItem[] = JSON.parse(localStorage.getItem('cart') || '[]')

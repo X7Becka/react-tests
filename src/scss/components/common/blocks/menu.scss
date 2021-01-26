@@ -6,8 +6,6 @@
   align-items: center;
 
   &__links-wrapper {
-    //display: flex;
-    //flex-direction: row;
     width: 100%;
   }
 
@@ -17,15 +15,6 @@
   }
 
   &__swiper {
-    //width: 100%;
     display: flex;
-  }
-
-  //.swiper-container {
-  //  width: 100%;
-  //}
-  .swiper-wrapper {
-    //display: flex;
-    //justify-content: center;
   }
 }

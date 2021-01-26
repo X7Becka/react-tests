@@ -102,10 +102,6 @@ textarea {
     border-radius: 10px !important;
   }
 
-  &-Scroller {
-    margin-right: -15px !important;
-  }
-
   &-Wrapper {
     @include transition(inset);
   }

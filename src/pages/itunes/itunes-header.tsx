@@ -1,4 +1,4 @@
-import React, {MutableRefObject, useState} from 'react'
+import React, {MutableRefObject} from 'react'
 import {Link, Route, Switch} from 'react-router-dom'
 import {CustomInput} from '../../components/data-input/custom-input'
 import {CustomButton} from '../../components/buttons/custom-button'
@@ -20,11 +20,11 @@ export const ItunesHeader: React.FC<TProps> = React.memo((props) => {
                     <CustomInput className="itunes-header__search-input"
                                  onEnter={() => searchProducts(searchQuery.current.value, 1)}
                                  inputRef={searchQuery}
-                                 isLoading={reqStatus.state === 'loading'}
+                                 isLoading={reqStatus?.state === 'loading'}
                     />
                     <CustomButton className="itunes-header__button itunes-header__button--search"
                                   onClick={() => searchProducts(searchQuery.current.value, 1)}
-                                  disabled={reqStatus.state === 'loading'}
+                                  disabled={reqStatus?.state === 'loading'}
                     >
                         search
                     </CustomButton>
@@ -80,5 +80,5 @@ export const ItunesHeader: React.FC<TProps> = React.memo((props) => {
 type TProps = {
     className: string
     searchProducts: <T extends types.FetchProductsTAction['payload']> (productName: T['productName'], page: T['page']) => void
-    reqStatus: ReqStatusState
+    reqStatus?: ReqStatusState
 }

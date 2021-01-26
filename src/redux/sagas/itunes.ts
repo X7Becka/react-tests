@@ -10,15 +10,12 @@ export function* watchItunesSaga() {
 
 function* callGetProducts({payload}: types.FetchProductsTAction) {
     try {
-        console.log(payload, 'payload')
         yield put(storeProductsAction(null))
         yield put(reqStatusAction('loading'))
         const response = yield call(getProductsApi, payload.productName, payload.page)
-        yield put(storeProductsAction(response.data))
         yield put(reqStatusAction('complete'))
-        yield 'complete'
+        yield put(storeProductsAction(response.data))
     } catch(error) {
-        console.log(error, 'error')
         yield put(reqStatusAction('error'))
     }
 }

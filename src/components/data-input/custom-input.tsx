@@ -21,7 +21,9 @@ export class CustomInput extends React.PureComponent <TProps> {
             }
         }
         return (
-            <FormControl className={className} classes={{root: 'custom-input'}}>
+            <FormControl className={className}
+                         classes={{root: 'custom-input'}}
+            >
                 <InputLabel classes={{root: 'custom-input__label'}}>{label}</InputLabel>
                 <Input onKeyDown={_onEnter}
                        classes={{root: 'custom-input__input', focused: 'custom-input__input--focused'}}
